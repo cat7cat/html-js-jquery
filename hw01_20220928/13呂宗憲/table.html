@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格table</title>
+    <style>
+        hr{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        table{
+            margin: 50px;
+        }
+        th{
+            width: 100px;
+            height: 30px;
+            /* text-align: center; */
+        }
+        td{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            color: blue;
+            /* font-weight: 900; */
+            font-family: 微軟正黑體;
+        }
+        table,tr,th,td{
+            border: solid 1px #000;
+            border-collapse: collapse;
+        }
+        .r{
+            color: red;
+        }
+        .cl{
+            background-color: #84C1FF;
+            color: #fff;
+        }
+        .cl table,.cl tr,.cl th,.cl td{
+            border: solid 1px #FFC78E;
+            border-collapse: collapse;
+            font-size: 25px;
+        }
+        .cl th {
+            background-color: #8ab0d6;
+            width: inherit;
+            height: inherit;
+
+        }
+        .cl td {
+            padding: 10px;
+            color: #fff;
+            width: inherit;
+            height: inherit;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello table
+    </h1>
+    <br>
+    <!-- 練習一 -->
+    <!-- 九宮格 -->
+    <!-- 1 2 3 -->
+    <!-- 4 5 6 -->
+    <!-- 7 8 9 -->
+    <!-- 練習二 -->
+    <!-- 5 => 紅色 -->
+    <!-- 練習三 -->
+    <!-- 5以外 => 藍色 -->
+    <!-- 練習四 -->
+    <!-- 合併表格 -->
+    <!-- 1 2 3 => 合併 -->
+    <!-- 7 8 => 合併 -->
+    <!-- 練習五 -->
+    <!-- 3 6 9 => 合併留3 -->
+    <!-- 3 6 9 => 合併留9 -->
+    <h1>Original</h1>
+    <table>
+        <tr bgcolor ="pink">
+            <th>左</th>
+            <th>中</th>
+            <tH>右</tH>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="r">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>rowspan</h1>
+    <table>
+        <tr bgcolor ="pink">
+            <th>左</th>
+            <th>中</th>
+            <tH>右</tH>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <!-- <td>4</td> -->
+            <td class="r">5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>colspan</h1>
+    <table>
+        <tr bgcolor ="pink">
+            <th>左</th>
+            <th>中</th>
+            <tH>右</tH>
+        </tr>
+        <tr>
+            <td colspan="3">1</td>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="r">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td colspan="2">7</td>
+            <!-- <td>8</td> -->
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>rowspan2</h1>
+    <table>
+        <tr bgcolor ="pink">
+            <th>左</th>
+            <th>中</th>
+            <tH>右</tH>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="3">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="r">5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <!-- <td>9</td> -->
+        </tr>
+    </table>
+    <hr>
+    <h1>rowspan2-2</h1>
+    <table>
+        <tr bgcolor ="pink">
+            <th>左</th>
+            <th>中</th>
+            <tH>右</tH>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="3">9</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="r">5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <!-- <td>9</td> -->
+        </tr>
+    </table>
+    <hr>
+    <h1>課表</h1>
+    <table class="cl">
+        <tr>
+            <th colspan="2">節數</th>
+            <!-- <th></th> -->
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+        </tr>
+        <tr>
+            <td colspan="2">早自習<br>0750~0830</td>
+            <!-- <td></td> -->
+            <td colspan="5"></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td colspan="2">第一節<br>0840~0920</td>
+            <!-- <td></td> -->
+            <td rowspan="2">國語</td>
+            <td colspan="3">數學</td>
+            <!-- <td>數學</td>
+            <td>數學</td> -->
+            <td>國語</td>
+        </tr>
+        <tr>
+            <td colspan="2">第二節<br>0930~1010</td>
+            <!-- <td></td> -->
+            <!-- <td>國語</td> -->
+            <td>自然</td>
+            <td>音樂</td>
+            <td>國語</td>
+            <td>彈性</td>
+        </tr>
+        <tr>
+            <td colspan="2">第三節<br>1030~1110</td>
+            <!-- <td></td> -->
+            <td>數學</td>
+            <td>健康</td>
+            <td>國語</td>
+            <td>鄉土</td>
+            <td rowspan="2">自然</td>
+        </tr>
+        <tr>
+            <td colspan="2">第四節<br>1120~1200</td>
+            <!-- <td></td> -->
+            <td>英語</td>
+            <td>彈性</td>
+            <td>社會</td>
+            <td>英語</td>
+            <!-- <td>自然</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">午休時間<br>1200~1320</td>
+            <!-- <td></td> -->
+            <td colspan="5"></td>
+            <!-- <td></td>
+            <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr>
+            <td colspan="2">第五節<br>1330~1410</td>
+            <!-- <td></td> -->
+            <td>社會</td>
+            <td rowspan="2">美勞</td>
+            <td rowspan="3"></td>
+            <td rowspan="3">綜合</td>
+            <td>體育</td>
+        </tr>
+        <tr>
+            <td colspan="2">第六節<br>1420~1500</td>
+            <!-- <td></td> -->
+            <td>體育</td>
+            <!-- <td>美勞</td> -->
+            <!-- <td></td> -->
+            <!-- <td>綜合</td> -->
+            <td>國語</td>
+        </tr>
+        <tr>
+            <td colspan="2">第七節<br>1520~1600</td>
+            <!-- <td></td> -->
+            <td colspan="2">彈性</td>
+            <!-- <td>彈性</td>
+            <td></td> -->
+            <!-- <td>綜合</td> -->
+            <td>社會</td>
+        </tr>
+    </table>
+</body>
+</html>

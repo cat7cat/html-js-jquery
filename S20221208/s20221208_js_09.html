@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The insertBefore() Method</h2>
+
+<ul id="myList">
+  <li id="myLi">Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<script>
+// Create a "li" element:
+// const newNode = document.createElement("li");
+// Create a text node:
+// Append text node to "li" element:
+
+// Insert before existing child:
+const myNode = document.createElement('li');
+const list = document.getElementById("myList");
+const li = document.getElementById("myLi");
+
+//增加一個文字結點
+// append 放在裡面
+const textNode = document.createTextNode("Water");
+myNode.appendChild(textNode);
+// insertBefore(增加的節點,位置) 
+
+list.insertBefore(myNode, li);
+</script>
+  
+</body>
+</html>

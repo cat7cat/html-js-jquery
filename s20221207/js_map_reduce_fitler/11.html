@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司發年終</title>
+    <!-- 題目 員工=[3,4,5,6,7]@1發兩個月，總共要發多少@2每個人發兩個月，月薪五萬的發四個月，總共要發多少 -->
+</head>
+<body>
+    <p id="money"></p>
+    <button type="button" id="myBtn">全部員工兩個月年終</button>
+    <button type="button" id="myBtn2">有分積效發年終</button>
+    <button type="button" id="myBtn3">filter</button>
+    
+<script>
+    // 員工薪水分別為3、4、5、6、7萬(陣列)
+    // 第一個按扭，按下去，所有值*2
+    // sum加總，使用reduce
+    // reduce可以讓陣列中的每個元素與回傳的值再次作運算，將陣列化為單一值，應用於陣列中每個value的累加
+    let employee = [3,4,5,6,7];
+        let newemployee = employee.map((value,key)=>{
+            return value*2;
+        });
+        let sum1=newemployee.reduce((total,value)=>{
+            return total+value;
+        });
+        myBtn.addEventListener("click",()=>{
+            document.getElementById("money").innerHTML=newemployee + "共發" +sum1;
+        });
+        
+        // 第二個按扭，按下去，大於5萬薪水的*4，其餘*2
+        // 利用map功能會透過函式內所回傳的值組合成一個新的陣列
+        // 並不會改變原陣列employee[3、4、5、6、7]
+        // 回傳數量會等於原始陣列的長度
+        // 如果不回傳則是 undefined
+        let newemployee2 = employee.map((value,key)=>{
+            if(value >= 5){
+                return value*4;            
+            }else{
+                return value*2;            
+            }
+        });
+        let sum2=newemployee2.reduce((total,value)=>{
+            return total+value;
+        });
+        myBtn2.addEventListener("click",()=>{
+            document.getElementById("money").innerHTML=newemployee2+"共發" +sum2;
+        });
+
+        // filter 塞選資料
+        // 此條件為塞選value值小於5的，故按下按扭filter時，只出現3、4(原陣列有3、4、5、6、7，只選比5小的value)
+        let employeeFilter = employee.filter((value) => {
+            return value < 5;
+        });
+        myBtn3.addEventListener("click",()=>{
+            document.getElementById("money").innerHTML=employeeFilter;
+        });    
+</script>    
+</body>
+</html>

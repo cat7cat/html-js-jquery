@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var varx = 2;
+        function cal(){
+            console.log('ex varx', varx);
+            var varx = 5;
+            var vary=1 ;  
+            console.log('varx+vary', varx+vary);
+        }
+        cal();
+        console.log('varx', varx);
+        //varx 同時在函式外面跟裡面都有宣告　→　呼叫函式時, 函式會抓到函式裡的varx. 但是第13行會顯示undefined.
+        //varx 只有在函式外面宣告　→　函式會抓外面的varx.
+        //varx 只有在裡面宣告　→　函式外面的varx會變成沒有定義.
+    </script>
+</body>
+</html>

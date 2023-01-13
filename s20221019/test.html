@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST-flex-basis and width</title>
+    <style>
+        .div {
+            display: flex;
+            display: inline-flex;
+            /* background-color: lightgray; */
+        }
+
+        .span1 {
+            background-color: lightblue;
+            flex-basis: 100px;
+            /* 沒動 */
+            width: 100px;
+            /* 有拉寬 */
+        }
+
+        .span2 {
+            background-color: lightcoral;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <span class="span1">test</span>
+        <span class="span2">test test test test test</span>
+    </div>
+</body>
+
+</html>

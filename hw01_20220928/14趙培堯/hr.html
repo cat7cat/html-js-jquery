@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label:hover {
+            color: red;
+        }
+
+        body {
+            text-align: center;
+        }
+        div{
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            border: 2px black;
+            background: blue url('https://flic.kr/p/2nHP7Pw');
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTML Forms</h2>
+
+    <!-- <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p> -->
+    <h2>form</h2>
+    <form action="xxx.php">
+        <label for="name">姓名</label>
+        <input type="text" name="name" id="name">
+        <p></p>
+        <label for="money">預期薪水</label>
+        <input type="number" name="money" id="money">
+        <br>
+        <label for="usgerage">最愛程式語言</label>
+        <br>
+        <input type="radio" name="usgerage" value="age1" id="html">
+        <label for="html">html</label>
+        <input type="radio" name="usgerage" value="age1" id="css">
+        <label for="css">css</label>
+        <input type="radio" name="usgerage" value="age1" id="js">
+        <label for="js">js</label>
+        <input type="radio" name="usgerage" value="age1" id="php">
+        <label for="php">php</label>
+        <input type="radio" name="usgerage" value="age1" id="sql">
+        <label for="sql">sql</label>
+        <br>
+        <!-- 提交 -->
+        <input type="submit">
+        <!-- 重設 -->
+        <input type="reset">
+        <br>
+        <h1>程式設計好玩嗎?</h1>
+        <br>
+        <input type="checkbox" name="good" id="good"><label for="good">好玩</label>
+        <input type="checkbox" name="not_good" id="not_good"><label for="not_good">不好玩</label>
+        <input type="checkbox" name="idont" id="idont"><label for="idont">不知道</label>
+        <input type="checkbox" name="bye" id="bye"><label for="bye">想放棄</label>
+        <input type="checkbox" name="GG" id="GG"><label for="GG">GG</label>
+        <br>
+        <input type="submit">
+        <input type="reset">
+        <br>
+        <!-- <label for="userPassword">請輸入密碼</label>
+        <input type="password" name="userPassword" id="userPassword"> -->
+        <br>
+        <label for="">請輸入生日</label>
+        <input type="datetime-local" name="" id="">
+        <select name="" id="">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        
+    </form>
+</body>
+
+</html>

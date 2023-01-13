@@ -1,0 +1,32 @@
+在Function外面宣告的"Var A" 全script都可以用 (除非Function裡面已經有同樣名字的宣告)
+如果已經在外面宣告 "Var A" Function裡面也宣告 "Var A" Function會使用 this.Function裡面所宣告的Var A
+根據例子 ->
+var varX = 2; //外部varX
+
+        function cal() {
+            console.log('ex varX', varX);
+            var varX = 5, varY = 1; 
+            console.log('varX+varY', varX + varY);
+        }
+        cal();
+        console.log('varX', varX);
+
+此時的console.log('ex varX', varX); -> undefined
+
+因為this.function裡面已經有VarX 所以不會往外抓 但是由於我們一開始先console.log('ex varX', varX); 沒有先宣告
+VarX = 5 所以此時他也沒有抓到VarX = 5
+
+先宣告Var = 5 再 console.log 就可以吃到Function先宣告的Var 
+如下 ->
+var varX = 2; //外部varX
+
+        function cal() {
+            var varX = 5, varY = 1;                   <-changed 
+            console.log('ex varX', varX);             <-changed
+            console.log('varX+varY', varX + varY);
+        }
+        cal();
+        console.log('varX', varX);
+
+
+此時的console.log('ex varX', varX); -> 5

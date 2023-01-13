@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .box {
+            /* height: 500px; */
+            /* 使用者螢幕高度單位 相對 */
+            /* height: 80vh; */
+        }
+
+        #f1 {
+            /* background-color: lightblue; */
+            /* height: 80vh; */
+        }
+
+        #f2 {
+            background-color: lightpink;
+            height: 80vh;
+        }
+
+        #f3 {
+            background-color: lightgreen;
+            height: 80vh;
+        }
+        img{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#f1">1F</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#f2">2F</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#f3">3F</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#f4">4F</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid box" id="f1">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- 200/300 => 100% width 200 -> 1920 height 300*100 -->
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/id/1002/1200/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/id/1003/1200/300" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/id/1004/1200/300" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid mt-3 box" id="f2">
+        <h2>Nesting Button Groups</h2>
+        <p>Nest button groups to create dropdown menus:</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tablet</a></li>
+                    <li><a class="dropdown-item" href="#">Smartphone</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-3 box" id="f3">
+        <br>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    <div class="container-fluid mt-5 box" id="f4">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <img src="https://picsum.photos/id/1002/300/300" class="rounded-circle img-fluid vh-100" alt="...">
+            </div>
+            <div class="col-12 col-sm-3">
+                <img src="https://picsum.photos/id/1003/300/300" class="rounded-circle img-fluid w-100" alt="...">
+            </div>
+            <div class="col-12 col-sm-3">
+                <img src="https://picsum.photos/id/1004/300/300" class="rounded-circle img-fluid w-100" alt="...">
+            </div>
+            <div class="col-12 col-sm-3">
+                <img src="https://picsum.photos/id/1005/300/300" class="rounded-circle img-fluid w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-primary">
+        <div class="my-box text-center border bg-danger mx-auto invisible" style="width:200px ;height:200px">
+        55688
+        </div>
+    </div>
+    <div class="mt-5 container-fluid bg-dark text-center text-white p-5">
+        <span class="fs-3">Lorem ipsum dolor sit amet.</span>
+    </div>
+</body>
+
+</html>

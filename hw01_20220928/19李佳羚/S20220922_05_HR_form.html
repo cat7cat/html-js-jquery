@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR FORM</title>
+    <style>
+        * {
+            vertical-align: bottom;
+            /* text-align: center; */
+        }
+
+        .Class {
+            background-color: #F5E8E4;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/bd.css"> -->
+</head>
+
+<body>
+    <fieldset class="Class">
+        <legend>基本資料</legend>
+        <p>
+        <form action="">
+            <p>
+                <label for="name">姓名:</label>
+                <input type="text" name="name" id="name" value="" required>
+                &nbsp;
+                &nbsp;
+                <label for="date">生日:</label>
+                <input type="date" name="date" id="date" required>
+                &nbsp;
+                &nbsp;
+                <label for="">性別:</label>
+                <input type="radio" name="user" value="user1" id="男">
+                <label for="男">男</label>
+                <input type="radio" name="user" value="user2" id="女">
+                <label for="女">女</label>
+            </p>
+            <P>
+                <label for="手機">手機:</label>
+                <input type="tel" name="usertel" id="手機" pattern="[0-9]{4}-[0-9]{6}" placeholder="ex:0912-345678"
+                    required>
+                &nbsp;
+                &nbsp;
+                <label for="number">期望薪資:</label>
+                <input type="number" name="num" min="25500" max="999999" step="1" size="10" required>
+                &nbsp;
+            </P>
+            <p>
+                <label for="address">地址:</label>
+                <input type="text" name="address" id="address" size="68" required>
+            </p>
+            <p>
+                <label for="weburl">個人作品集:</label>
+                <input type="weburl" name="weburl" id="weburl" pattern="https?://.+" placeholder="ex:http://" size="61" required>
+
+            </p>
+            <p>
+                <label for="">慣用語法:</label>
+                <input type="checkbox" name="computer" id="HTC" value="HTC">
+                <label for="HTC">Php</label>
+                <input type="checkbox" name="computer" id="Apple" value="Apple">
+                <label for="Apple">MySQL</label>
+                <input type="checkbox" name="computer" id="ASUS" value="ASUS">
+                <label for="ASUS">Java</label>
+                <input type="checkbox" name="computer" id="other" value="other">
+                <label for="other">other:</label>
+                <input type="text" name="other" id="other" size="27">
+            </p>
+        </form>
+        </p>
+    </fieldset>
+
+    <p>
+    <fieldset class="Class">
+        <legend>請回答以下問題</legend>
+        <form action="">
+            <!-- <P>
+                自我介紹: <textarea name="introduction" id="introduction" cols="30" rows="3" required></textarea>
+            </P> -->
+            <!-- <P> 請問您的優缺點是什麼?<br>
+                <textarea name="introduction" id="introduction" cols="30" rows="3" required>
+                </textarea>
+            </P> -->
+            <P> 達不到工作目標時的處理方式:<br>
+                <textarea name="introduction" id="introduction" cols="72" rows="3" required>
+                </textarea>
+            </P>
+            <!-- <P> 可以接受加班嗎:<br>
+                <textarea name="introduction" id="introduction" cols="30" rows="3" required>
+                </textarea>
+            </P> -->
+            <!-- <P> 離開上一份工作的原因是:<br>
+                <textarea name="introduction" id="introduction" cols="30" rows="3" required>
+                </textarea>
+            </P> -->
+            <P> 為什麼想來我們公司:<br>
+                <textarea name="introduction" id="introduction" cols="72" rows="3" required>
+                </textarea>
+            </P>
+            <!-- <P> 對公司的期待是:<br>
+                <textarea name="introduction" id="introduction" cols="30" rows="3" required>
+                    </textarea>
+            </P> -->
+            <input type="submit" value="確認送出">
+            <input type="reset" value="清除">
+        </form>
+    </fieldset>
+</p>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        /* 最後顯示最下面的blue */
+        /* 所以外部套件時 外套css放上方 */
+        /* 我們自己寫CSS 放下面*/
+        /* 餐盤的故事 */
+        h3 {
+            color: red;
+        }
+
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h3>form</h3>
+    <!-- form tab -->
+    <!-- input:text tab -->
+    <!-- input:number tab -->
+    <!-- label tab -->
+    <form action="xxx.php">
+        <!--  w3schools fieldset-->
+        <fieldset>
+            <legend>myForm</legend>
+
+            <!-- text number radio checkbox select textarea date password submit reset -->
+
+            <!-- input text 文字方塊-->
+            <!-- name => 送到後端 -->
+            <!-- id 當前頁面 方便我們操控 -->
+
+            <!-- name money-->
+            <!-- name name  -->
+            <!-- <學生 座號="01" > key value -->
+            <!-- <學生 座號="😀😀😀😀" > key value -->
+
+            <p>
+                <label for="name">姓名:</label>
+                <input type="text" name="name" id="name" value="" style="width: 80%;">
+
+                <!-- input text 數字方塊-->
+            <p>
+                <label for="money">薪水:</label>
+                <input type="number" name="money" id="money" value="">
+            </p>
+            <p>
+                <label for="password">密碼:</label>
+                <input type="password" name="password" id="password" value="">
+            </p>
+
+            <p>
+                <label for="date">生日:</label>
+                <input type="date" name="date" id="date" value="">
+            </p>
+
+            <p>
+                <!-- radio 單一選擇 / label 放後面 -->
+                <label for="">最愛的語言:</label>
+                <input type="radio" name="radio" id="html" value="">
+                <label for="html">html</label>
+                <input type="radio" name="radio" id="css" value="">
+                <label for="css">css</label>
+                <input type="radio" name="radio" id="js" value="">
+                <label for="js">js</label>
+                <input type="radio" name="radio" id="php" value="">
+                <label for="php">php</label>
+                <input type="radio" name="radio" id="sql" value="">
+                <label for="sql">sql</label>
+            </p>
+
+            <!-- 練習一 -->
+            <!-- checkbox -->
+            <!-- 我的興趣 可以多選 5個選項 -->
+            <input type="checkbox" name="love[]" id="">
+            <label for="">閱讀</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">打球</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">看電影</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">聽音樂</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">寫程式</label>
+
+            <!-- key value -->
+            <!-- love = ['閱讀','寫程式'] -->
+
+            <!-- num1 = 'xxx' -->
+            <!-- num2 = 'xxx' -->
+
+            <!-- num = ['xxx','xxx','xxx' , .....] -->
+
+            <!-- love[]  -->
+            <!-- love  -->
+
+            <!-- select -->
+            <p>
+                <label for="area">未來工作地點</label>
+                <select name="area" id="area">
+                    <option value="1">北</option>
+                    <option value="2">中</option>
+                    <option value="3">南</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="dream">我的夢想</label>
+                <textarea name="" id="dream" cols="30" rows="10">
+
+            </textarea>
+            </p>
+
+
+            <p>
+                <input type="submit" value="送出">
+                <input type="reset" value="重整">
+            </p>
+        </fieldset>
+
+
+    </form>
+</body>
+
+</html>

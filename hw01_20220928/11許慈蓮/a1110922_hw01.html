@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  表格內文字置中 text-align:center   -->
+    <style>
+        table{
+            width:auto
+        }
+        .chinese{background-color: yellow;}
+        
+        td{
+            text-align: center;
+        }
+        th{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table>tr*10>td*6 -->
+    <table border="1">
+        <tr>
+            <th width="100px" >節數</th>
+            <th width="100px" >一</th>
+            <th width="100px">二</th>
+            <th width="100px">三</th>
+            <th width="100px">四</th>
+            <th width="100px">五</th>
+        </tr>
+        <tr>
+            <td width="100px" style="background-color: darkgray">早自習</td>
+            <td width="100px" colspan="5"></td>
+            <!-- <td width="100px"></td> -->
+            <!-- <td width="100px"></td> -->
+            <!-- <td width="100px"></td> -->
+            <!-- <td width="100px"></td> -->
+        </tr>
+        <tr>
+            <td width="100px " style="background-color: darkgray">第一節</td>
+            <td width="100px" rowspan="2" class="chinese">國語</td>
+            <td width="100px" colspan="3">數學</td>
+            <!-- <td width="100px">4</td> -->
+            <!-- <td width="100px">5</td> -->
+            <td width="100px" class="chinese">國語</td>
+        </tr>
+        <tr>
+            <td width="100px"  style="background-color: darkgray">第二節</td>
+            <!-- <td width="100px">國語</td> -->
+            <td width="100px">自然</td>
+            <td width="100px">音樂</td>
+            <td width="100px" class="chinese">國語</td>
+            <td width="100px">彈性</td>
+        </tr>
+                <tr>
+            <td width="100px"  style="background-color: darkgray">第三節</td>
+            <td width="100px">數學</td>
+            <td width="100px">健康</td>
+            <td width="100px" class="chinese">國語</td>
+            <td width="100px">鄉土</td>
+            <td width="100px" rowspan="2">自然</td>
+        </tr>
+        <tr>
+            <td width="100px"  style="background-color: darkgray">第四節</td>
+            <td width="100px">英語</td>
+            <td width="100px">彈性</td>
+            <td width="100px">社會</td>
+            <td width="100px">英語</td>
+            <!-- <td width="100px">自然</td> -->
+        <tr>
+            <td width="100px"  style="background-color: darkgray">午休時間</td>
+            <td width="100px" colspan="5"></td>
+            <!-- <td width="100px">3</td> -->
+            <!-- <td width="100px">4</td> -->
+            <!-- <td width="100px">5</td> -->
+            <!-- <td width="100px">6</td> -->
+        </tr>
+        <tr>
+            <td width="100px"  style="background-color: darkgray">第五節</td>
+            <td width="100px">社會</td>
+            <td width="100px" rowspan="2">美勞</td>
+            <td width="100px" rowspan="3"></td>
+            <td width="100px" rowspan="3">綜合</td>
+            <td width="100px">體育</td>
+        </tr>
+        <tr>
+            <td width="100px"  style="background-color: darkgray">第六節</td>
+            <td width="100px">體育</td>
+            <!-- <td width="100px"></td> -->
+            <!-- <td width="100px">4</td> -->
+            <!-- <td width="100px">5</td> -->
+            <td width="100px" class="chinese">國語</td>
+        </tr>
+        <tr>
+            <td width="100px"  style="background-color: darkgray">第七節</td>
+            <td width="100px" colspan="2">彈性</td>
+            <!-- <td width="100px"></td> -->
+            <!-- <td width="100px">4</td> -->
+            <!-- <td width="100px">5</td> -->
+            <td width="100px">社會</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

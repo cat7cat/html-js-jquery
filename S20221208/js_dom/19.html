@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append / Remove</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="one">
+            <div class="span">1</div>
+            <div class="span">2</div>
+            <p class="p">3</p>
+        </div>
+        <div class="move"></div>
+    </div>
+
+    <script>
+
+        const main = document.querySelector(".main");
+        const one = document.querySelector(".one");
+        const move = document.querySelector(".move");
+        const span = document.querySelector(".span");
+
+        let div1 = document.createElement("div");
+        div1.className = "div1";
+        let div2 = document.createElement("div");
+        div2.className = "div2";
+        let span1 = document.createElement("span");
+        span1.className = "span1";
+
+        // 父層.append( ) => 產生子層，會在父層內的最後
+        main.append(div1);
+
+        // 父層.insertBefore( 產生的event , 在哪個節點之前 )
+        main.insertBefore(div2, one);
+        one.insertBefore(span1, span);
+
+        // 要移除的節點.remove() => 刪除節點本身
+        // // 節點下的子層會一併被刪除
+        move.remove();
+
+        // 要移除的父層.removeChild( 要刪除的節點名稱 ) => 假如有同樣名稱的節點，刪除由上而下第一個子節點
+        one.removeChild(span);
+
+        // 如果要刪除某節點下的所有 Ex: <div>
+        // // querySelectorAll( ) => 是個陣列，所以喊出來後要用 forEach 去跑才會動
+        const divAll = document.querySelectorAll(".one>div");
+        divAll.forEach(value => value.remove());
+
+        // 沒有給範圍一次指定全部的 <div> 的話會刪除 body 下的所有 <div>
+        // const divAll = document.querySelectorAll("div");
+        // one.removeChild(divAll);
+
+        // 想清空父層下的所有內容可以用 innerHTML = 空字串
+        // one.innerHTML="";
+
+        // 父層.replaceChild( 新節點, 舊節點 ) 
+        const p = document.querySelector(".p");
+        one.replaceChild(div1, p);
+
+        // replaceAll( 舊 , 替代 )
+        let pp = "12 13 15 18 19 15 16 20";
+        console.log(pp.replaceAll('15', '660'));
+
+    </script>
+</body>
+
+</html>

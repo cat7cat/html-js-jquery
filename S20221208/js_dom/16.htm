@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myH1">DOM の 增改刪查</div>
+    <button onclick="appendFun()">++</button>
+    <button onclick="removeFun()">--</button>
+    <button onclick="replaceFun()">??</button>
+    <div id="myDiv">
+
+    </div>
+    <script>
+        // 查..getElementBy??
+        const myDiv=document.getElementById('myDiv');
+        // 或...querySelector系列
+        const myDIV = document.querySelector('#myDiv');
+        const myDiv2 = document.querySelectorAll('#myDiv');
+        console.log('id',myDIV);
+        console.log('all',myDiv2);
+        console.log( typeof(myDIV));
+        console.log( typeof(myDiv2));
+        // 先找到要的元素綁定
+
+
+        // 新建HTML...createElement
+        console.log(greenP);
+        function appendFun() {
+            const greenP = document.createElement('p');
+            greenP.textContent="HELLO";
+            greenP.style.color='green';
+            // 創建一個元素 增加文字與樣式
+            myDiv.appendChild(greenP);
+            // 把剛創建的放進去剛綁定元素的子層
+        }
+        // 一個元件只能放一個地方，要一直新增創建要放在fun裡一直創建
+
+
+        //  刪除...removeChild...
+        function removeFun() {
+            myDiv.removeChild(myDiv.lastElementChild);
+        }
+
+        // 修改...找到要改的屬性用=改
+        function replaceFun() {
+            myDiv.lastElementChild.textContent='HI';
+        }
+
+        //
+    </script>
+</body>
+</html>

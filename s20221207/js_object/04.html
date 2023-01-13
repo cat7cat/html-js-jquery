@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('this',this);//直接在外部 指向window
+        let obj = {
+            // 變數 property
+            'name': '小名',
+            'age': 18,
+            'address': '泰山歐拉歐拉歐拉',
+            'location' : {'kee':'value testt'},
+            // 方法 method
+            //只有obj function this指定上一層obj
+            'helloFun': function () {
+                console.log('hello');
+                console.log('this.name',this.name);//這裡的this會指定上一層obj 故this.name=boj.name
+                let str =`${this.name} ${this.age} ${this.location.kee}`;//${this.location.kee}會=obj的location的kee的value  故會顯示value testt
+                console.log(str);
+            },
+            //arrow 箭頭函示 this 指向外部的window
+            //箭頭函示的變數只能吃到全域變數
+            // obj用let定義 所以是區域變數
+            //sleepfun的箭頭函示 故吃不到變數的值
+            'sleepfun' : () =>{
+                // console.log('sleepFun this' , this);
+                // obj.name
+                // let str = `${this.name}`;
+            }
+        }
+
+        console.log('obj', obj);
+        obj.name;
+        console.log('obj.name', obj.name);
+        obj.age;
+        console.log('obj.age', obj.age);
+        obj.helloFun();//呼叫obj裡的helloFun()動作
+        // obj.sleepFun();
+
+
+
+
+
+    </script>
+</body>
+</html>

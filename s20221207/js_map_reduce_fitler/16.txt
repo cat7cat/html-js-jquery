@@ -1,0 +1,15 @@
+MAP :
+let newArr = arr.map(?function(value, ?index){return...}) : 回傳處理後的新陣列
+**map與foreach的差別 : map不會修改原本的陣列、有return
+
+
+REDUCE:
+let total = arr.reduce((累計值, value ,?initialValue)=>{return 累計值+value}) : 回傳累計後的值
+**reduce差別 : 回傳一個值
+
+
+FILTER :
+let newArr = arr.filter(value => ...) : 依箭頭後的條件過濾，回傳一個新陣列
+
+
+(? ==非必要)

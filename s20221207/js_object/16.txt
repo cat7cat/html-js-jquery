@@ -1,0 +1,26 @@
+OJECT
+
+像多維陣列，索引可以放文字、函式...等
+
+ex.
+let score = {
+            'name': 'HI',
+            'english': 70,
+            'math': 80,
+            'chinses': 90,
+            'sum': function () {
+                return this.english + this.math + this.chinses;
+            },
+            'avg': function () {
+                return Math.ceil(score.sum() / 3);
+            }
+        }
+        console.log(`總成績為${score.sum()}分`);
+        console.log(`平均成績為${score.avg()}分`);
+
+
+THIS
+物件導向
+
+指向上一層的物件，例如上面的this 是指向 ""score整個物件""
+p.s. 箭頭函式無法使用，會指向Window

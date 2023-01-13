@@ -1,0 +1,33 @@
+<script>
+
+    // array.map 執行陣列的計算 並回傳組成新的陣列
+
+    let employeeArr = [3, 4, 5, 6, 7];
+    let employeeBonusArr = employeeArr.map((value, key) => {
+        if (value == 5) {
+            return value * 4;
+        } else {
+            return value * 2;
+        }
+    });
+    console.log(employeeBonusArr);
+
+    // array.reduce 將陣列的元素進行加總
+
+    let i = 0;
+    let sum = employeeBonusArr.reduce((total, value) => {
+        i++;
+        console.log('i', i);            // i 累加次數
+        console.log('total', total);    // total initValue 初始值
+        console.log('value', value);    // value currentValue 當前值
+        return total + value;
+    });
+    console.log('sum', sum);
+
+    // array.filter 塞選符合條件的值回傳至新陣列
+
+    let employeeArrFilter = employeeArr.filter((value) => {
+        return value < 5;
+    })
+
+</script>

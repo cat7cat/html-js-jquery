@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let letX = 100;
+        var varY = 2;//這是全域變數，並且，哪裡都可以使用。 
+        console.log('letX', letX);
+        console.log('varY', varY);
+        function cal() {
+            let letX = 5; //這是在function內的變數。
+            var varY = 1; //這是全域變數，會影響外面的變數，導致數字不準確。
+            console.log('letX', letX);//不會影響外面的變數。
+            console.log('varY', varY);//會將function外的變數改變。
+            console.log('letX+varY', letX + varY);
+
+        }
+        cal() //呼叫函數。
+        console.log('letX', letX);
+        console.log('varY', varY);
+    </script>
+</body>
+
+</html>

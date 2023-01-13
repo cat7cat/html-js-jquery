@@ -1,0 +1,9 @@
+var varX = 2; //场varX 糶  (function琌 办var)
+        function cal() {
+            // console.log('ex varX', varX);  (玡ㄏノ穦hoisting(笵ΤvarX ⊿Τ) 眔undefined p.s.瘤Τ倒跋办ず)
+            var varX = 5, varY = 1; (functionず琌 跋办var)
+            console.log('varX+varY', varX + varY); (Чㄏノ(跋办var) 眔6)
+        }
+        cal();
+        console.log('varX', varX); (ㄏノ办var functionず跋办varア 眔2)
+

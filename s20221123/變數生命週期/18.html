@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="cal()">cal</button>
+    <p id="text1"></p>
+    <button onclick="cal2()">cal2</button>
+    <p id="text2"></p>
+
+
+    <script>
+        var X ='外部宣告';
+        console.log('var X',X);
+        function cal(){
+            var X = '內部宣告'
+            // 在function裡面和外面都宣告同一個變數時 以function裡面的宣告優先
+            console.log('var X',X);
+        }
+        function cal2(){
+            // function裡沒有宣告變數時 使用function外已宣告的變數
+            console.log('var X',X);
+        }
+
+    </script>
+</body>
+</html>

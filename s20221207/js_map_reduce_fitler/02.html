@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let employeeArr = [3, 4, 5, 6, 7];
+        // Array.map() Array.reduce() Array.filter()
+        // 前面接Array.
+        // ()中都是放入function
+
+        // map()
+        // function有一個參數，是每個原陣列中的元素
+        // 宣告給一個變數，即為新的陣列名稱
+        // 將每個原陣列中的元素，執行程式碼，return
+        // return值=>給新的陣列，增加新元素
+        let employeeArrBonusArr = employeeArr.map((value) => {
+            if (value == 5) {
+                return value * 4;
+            } else {
+                return value * 2;
+            }
+        });
+        console.log('employeeArrBonusArr', employeeArrBonusArr);
+
+        // reduce()
+        // function有兩個參數
+        // 第一個參數=>陣列中的第一個元素，第二個參數=>陣列中的第二個及後面的元素
+        // 從第一個元素開始，與第二個元素，單獨執行程式碼
+        // 再用前一次return結果，與第三個元素，再重複執行程式碼
+        // return值=>最後一個計算值
+        let sumBonus = employeeArr.reduce((total, value) => {
+            return total - value;
+        });
+        console.log('sumBonus=>', sumBonus);
+
+        // filter()
+        // function有一個參數，是每個原陣列中的元素
+        // 宣告給一個變數，即為新的陣列名稱
+        // 不符合條件的元素，略過
+        // 將符合條件的元素，return原陣列中的元素
+        // return值=>給新的陣列，增加新元素
+        let employeeArrFilter = employeeArr.filter((value) => {
+            return value < 5;
+        });
+        console.log('employeeArrFilter',employeeArrFilter);
+
+    </script>
+</body>
+
+</html>

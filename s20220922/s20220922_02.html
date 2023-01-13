@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: aquamarine;
+        }
+        td{
+            color: blue;
+        }
+        .lastClass{
+            background-color: cornflowerblue;
+            color: yellow;
+        }
+        #last{
+            background-color: pink;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello table
+    </h1>
+    <!--  -->
+    <!-- body id 獨一無物  / #id -->
+    <!-- body class 群組  / .class -->
+
+    <!-- table -->
+    <!-- table tr td 都需要-->
+    <!-- 練習一
+        九宮格
+        1 2 3
+        4 5 6
+        7 8 9
+    -->
+    <!-- 練習二
+        5  => 紅色
+    -->
+
+    <!-- 練習三
+        5 以外  => 藍色
+    -->
+
+    <!-- table tr th(table head) -->
+    <!-- table tr td -->
+    <h3>rowspan</h3>
+    <table border="1">
+        <!-- row -->
+        <tr>
+            <th width="100px">左</th>
+            <th width="100px">中</th>
+            <th width="100px">右</th>
+        </tr>
+        <tr>
+            <td width="100px" rowspan="2">1</td>
+            <td width="100px">2</td>
+            <td width="100px" rowspan="3" class="lastClass">9</td>
+            <!-- <td width="100px" rowspan="3">3</td> -->
+        </tr>
+        <tr>
+            <!-- <td width="100px">4</td> -->
+            <td width="100px" style="color: red;">5</td>
+            <!-- <td width="100px">6</td> -->
+        </tr>
+        <tr>
+            <td width="100px">7</td>
+            <td width="100px">8</td>
+            <!-- <td width="100px" rowspan="3" class="lastClass">9</td> -->
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>colspan</h3>
+    <table border="1">
+    <!-- 練習四 -->
+    <!-- 
+        1 2 3 合併
+        7 8 合併
+     -->
+
+
+    <!-- 練習五 rowspan -->
+    <!-- 
+        3 6 9 合併 保留3
+        => 3 6 9 合併 保留9
+     --> 
+        <!-- row -->
+        <tr>
+            <th width="100px">左</th>
+            <th width="100px">中</th>
+            <th width="100px">右</th>
+        </tr>
+        <tr>
+            <td width="100px" colspan="3">1</td>
+            <!-- <td width="100px">2</td> -->
+            <!-- <td width="100px">3</td> -->
+        </tr>
+        <tr>
+            <td width="100px">4</td>
+            <td width="100px" style="color: red;">5</td>
+            <td width="100px">6</td>
+        </tr>
+        <tr>
+            <td width="100px" colspan="2">7</td>
+            <!-- <td width="100px">8</td> -->
+            <td width="100px" class="lastClass">9</td>
+        </tr>
+    </table>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" id="myBtn">myBtn</button>
+    <button type="button" id="myBtn2">myBtn2</button>
+    <button type="button" id="myBtn3">myBtn3</button>
+    <script>
+        // 公司發年終
+        // employee = [3,4,5,6,7];
+        // ex1.發兩個月總共要發多少呢
+        // ex2.每個人都發兩個月 但領五萬的是傑出員工 四個 總共要發多少?
+        let employeeArr = [3, 4, 5, 6, 7];
+        let employeeBonusArr = employeeArr.map((value, key) => {
+            if (value == 5) {
+                return value * 4;
+            } else {
+                return value * 2;
+            }
+        });
+        console.log(employeeBonusArr);
+
+        // reduce 加總
+        // total initValue 最原始的值
+        // value currentValue
+        let i = 0;
+        let sum = employeeBonusArr.reduce((total, value) => {
+            i++;
+            console.log('i', i);
+            console.log('total', total);
+            console.log('value', value);
+            return total + value;
+        },10000);
+        console.log('sum', sum);
+
+        // filter 篩選資料
+        let employeeArrFilter = employeeArr.filter((value) => {
+            return value < 5;
+        })
+
+        // foreach
+        employeeArr = [3, 4, 5, 6, 7];
+        // 發獎金 2 倍
+        let bonusArr = [];
+        employeeArr.forEach((value,key) => {
+            let newValue = value * 2; //兩倍獎金
+            bonusArr.push(newValue);
+            // bonusArr.push(value*2);
+        });
+
+        console.log('bonusArr',bonusArr);
+        // 加總
+        let sumValue = 100; //初始值100
+        bonusArr.forEach((value,key) => {
+            sumValue += value;
+        })
+
+        console.log('sumValue',sumValue);
+
+        // 篩選
+        let filterArr= [];
+        bonusArr.forEach((value ,key) => {
+            if(value > 10){
+                filterArr.push(value);
+            }
+        });
+
+        console.log('filterArr',filterArr);
+
+        // indexOf 尋找
+        let studentArr = ['amy','boc','cat'];
+        //find cat
+        // let getKey = studentArr.indexOf('cat');
+        // console.log('getKey',getKey);
+
+        let getKey = studentArr.indexOf('dog');
+        console.log('getKey',getKey);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+
+<body>
+  <button onclick="appendFun()">增加</button>
+  <button onclick="removeFun()">刪除</button>
+  <button onclick="replaceFun()">修改取代</button>
+  <div id="myDiv">
+
+  </div>
+  <script>
+    // 綁定 div 的位置
+    const myDiv = document.getElementById('myDiv');
+    
+    // 建立 <p style="color: green;">hello :)1、2....</p>
+    let text = 1;
+    function appendFun() {
+    // 綁定greenP-新增p一行
+    const greenP = document.createElement('p');
+    // greenP.textContent 增加文字
+    // TEXT=1,TEXT++，等於每新增一次，hello :)1、2、3....   
+        greenP.textContent = 'hello :)' + text;
+             text++;
+    // greenP.style.color 綠色文字
+        greenP.style.color = 'green';
+
+    // 在myDiv 裡面放入 greenP => <p style="color: green;">HELLO</p>
+        myDiv.appendChild(greenP);
+    }
+
+    //  刪除
+    function removeFun() {
+    // 移除myDiv裡面的最後一個節點(lastElementChild)。
+    myDiv.removeChild(myDiv.lastElementChild);
+    }
+
+    // 修改
+    function replaceFun() {
+    // 修改myDiv裡面的最後一個節點(lastElementChild)
+    // 把Hello :) 數字，修改成 替換最後一個
+    myDiv.lastElementChild.textContent = '替換最後一個';
+    }
+
+  </script>
+</body>
+
+</html>

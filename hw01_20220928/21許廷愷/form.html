@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        form {
+            width: 300px;
+            border: 3px solid black;
+            line-height: 30px;
+            background: rgb(224, 202, 202);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form action="">
+
+        <p>
+            <label for="name">名字：</label>
+            <input type="text" name="name" id="name" placeholder="王小明">
+        </p>
+
+        <p><label for="">性別</label>
+            <input type="radio" name="sex" id="sex1">
+            <label for="sex1">男</label>
+            <input type="radio" name="sex" id="sex2">
+            <label for="sex2">女</label>
+        </p>
+        <p>
+            <label for="date">生日：</label>
+            <input type="date" name="date" id="date">
+        </p>
+
+        <p>
+            <label for="IDnumber">身分證字號：</label>
+            <input type="password" name="IDnumber" id="IDnumber" placeholder="**********">
+            <label for=""></label>
+        </p>
+
+        <p>
+            <label for="">可上班時段：</label>
+            <input type="checkbox" name="morning" id="morning">
+            <label for="morning">早</label>
+            <input type="checkbox" name="noon" id="noon">
+            <label for="noon">中</label>
+            <input type="checkbox" name="night" id="night">
+            <label for="night">晚</label>
+        </p>
+
+        <p>
+            <label for="money">希望薪資：</label>
+            <input type="number" name="money" id="money" placeholder="100">
+        </p>
+
+        <label for="">希望工作地區：</label>
+        <select name="area" id="area">
+            <option value="n">台北</option>
+            <option value="m">台中</option>
+            <option value="n">台南</option>
+        </select>
+
+        <p>
+            <label for="whoami">自我介紹：</label>
+            <textarea name="" id="whoami" cols="30" rows="10" style="width:30% ;"></textarea>
+        </p>
+        <p style="text-align:center">
+
+            <button type="submit">送出</button>
+            <button type="reset">重置</button>
+        </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

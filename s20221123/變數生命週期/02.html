@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變數</title>
+</head>
+
+<body>
+    <script>
+        // 變數的type
+        let x = "text"; //string
+        let y = 123; //nubmer
+        let z = false //boolean
+
+        // 查看變數型態
+        console.log('x=', x, ',x typeof() => ', typeof (x));
+        console.log('y=', y, ',y typeof() => ', typeof (y));
+        console.log('z=', z, ',z typeof() => ', typeof (z));
+        // console.log => F12 查看console的資料
+
+        // 宣告變數   let / const / var
+        // let區域變數
+        let localNum = 11;
+        console.log('init localNum', localNum);
+        localNum = 5678;
+        console.log('now localNum', localNum);
+
+        // const 常數
+        const constNum = 3.14;
+        console.log('init constNum', constNum);
+        // constNum = 123;
+        // Uncaught TypeError: Assignment to constant variable.
+        console.log('constNum', constNum);
+
+        // var
+        var varX = 2;
+        function calVar() {
+            console.log('ex varX', varX);
+            // undefined 不明確的
+            // 45行的 varX 作用範圍為40行到47行
+            // 因為同時有全域和區域，起衝突，所以以區域為主，後面還是會執行
+            var varX = 5, varY = 1;
+            console.log('varX+varY=', varX + varY);
+        }
+        calVar();
+        console.log('varX_outFuncion', varX);
+
+        // let
+        let letX = 2;
+        function calLet() {
+            // console.log('ex letX', letX);
+            // ReferenceError 參考錯誤
+            // Uncaught ReferenceError: Cannot access 'letX' before initialization
+            // {
+                // 也可以放在{}大括號內，let 區域變數的作用範圍只有在{}大括號
+                let letX = 5, letY = 1;
+                console.log('letX+letY=', letX + letY);
+            // }
+        }
+        calLet();
+        console.log('letX_outFuncion', letX);
+
+        // let
+        var a = 5, b = 0;
+        let c = 2, d = 0;
+        {
+            var e = a + b;
+            let f = c + d;
+            console.log('e=>', e);
+            console.log('f=>', f);
+        }
+        console.log('out_a=>', a);
+        console.log('out_c=>', c);
+        console.log('out_e=>', e);
+        console.log('out_f=>', f);
+        // Uncaught ReferenceError: f is not defined
+        // f 只有在{}大括號內有效
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    
+    
+
+
+</head>
+<body>
+<!-- ajax get data dataatable getJson
+datatable 適合用在資料不多的情況
+如果資料多筆 建議自己寫 select db / pagination 分頁
+SELECT * FROM table 實際工作少用 當資料多幾萬筆 幾十萬筆時 主機會很慢 會當掉
+ -->
+
+
+<!-- html -->
+
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- js外掛 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script> 
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+<script>
+    $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+</script>
+
+
+
+</body>
+</html>
+
+<!-- 安裝方式
+
+# dataTables
+1.官網 https://datatables.net/manual/installation
+2. example
+3. html -> JQ
+4. 貼官網 html
+5. datatable cdn css /js 
+   js貼在 jquery 下面
+
+
+
+-->
+
+

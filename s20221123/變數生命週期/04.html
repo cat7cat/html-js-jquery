@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ///let為區域變數
+        ///var寫在function外為全域變數  寫在function裡面則為區域變數
+        ////var的全域變數與區域變數衝突時  以區域變數為重
+        ///
+
+
+        // var varX = 2; //外部varX 別人寫的
+        function cal() {
+            var varX = 5, varY = 1; //我們自己寫的
+            console.log('ex varX', varX);
+            console.log('varX+varY', varX + varY);
+        }
+        cal();
+        console.log('varX', varX);
+        ///當var的變數寫在function外時,function裡面的var沒有定義時,此時為全域變數,function裡的varx和外面的varx皆是輸出function外的varx=2
+        ///當var的變數同時寫在function的裡面和外面時,function裡的var為區域變數,外面的var為全域變數,故function裡的varx為5,  外面的varx為2
+        ///當var的變數寫在function裡面時,var的變數只能給function裡面用,故function外的varx會抓不到值,跳error,function內的可以正常抓到varx的值
+   
+   </script>
+</body>
+
+</html>

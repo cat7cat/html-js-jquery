@@ -1,0 +1,12 @@
+        // var let 
+        // var 全域變數 function內可以有區域變數的情況
+        var varX=2; //外部varX 別人寫的
+        function cal(){
+            // console.log('ex varX', varX);
+            var varX = 5 , varY = 1; //我們自己寫的
+            console.log('varX+varY',varX+varY);
+        }
+        // 當為第43行及第46.47行時，function內變數x為區域變數，結果為6
+        // 當為第43行及第45行時，此時變數為全域變數，結果為2
+        // 當為43.45.46.47行，此時function內外部皆有varX (重複變數名稱），
+        // 且43行在function內尚未被宣告值，因此第45行undefined

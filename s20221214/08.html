@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 800px;
+            height: 50px;
+            background-color: lightpink;
+        }
+
+        .box2 {
+            width: 800px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>select change animate</h3>
+    <select name="" id="">
+        <option value="1">1. hide show toggle 隱藏顯示切換</option>
+        <option value="2">2. fade in fade out toggle 淡入淡出切換</option>
+        <option value="3">3. slide up / slide down toggle  上滑/下滑切換</option>
+    </select>
+    <hr>
+    <div class="box1">Q:問題</div>
+    <div class="box2">A:Hello</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        // text or html 
+        // input => val
+
+
+        $(function () {
+            
+
+            // 練習 select
+            // 1. hide show toggle 隱藏顯示切換
+            // 2. fade in fade out toggle 淡入淡出切換
+            // 3. slide up / slide down toggle  上滑/下滑切換
+
+            // box1 => click 不消失
+            // box2
+
+            // 1.get select value
+            // let getSelectVal = $('select').val();
+            // console.log('getSelectVal', getSelectVal);
+            const box2 = $('.box2');
+
+            $('.box1').click(function () {   //box1 用click function
+                console.log('box1 ok');   
+                let getSelectVal = Number($('select').val());                  
+                console.log('getSelectVal', getSelectVal);                  
+                console.log('getSelectVal typeof', typeof (getSelectVal));  // 型別
+                switch (getSelectVal) {
+                    case 1:
+                    // 1. hide show toggle 隱藏顯示切換
+                        box2.toggle(2000);         // 2000是顯示速度      
+                        box2.text('hello hide');  // show 顯示的字
+                        break;
+                    case 2:  
+                    // 2. fade in fade out toggle 淡入淡出切換
+                        box2.fadeToggle(2000);  // 2000是顯示速度
+                        box2.text('hello fade');  // show 顯示的字然後消失
+                        break;
+                    case 3:
+                    // 3. slide up / slide down toggle  上滑/下滑切換
+                        box2.slideToggle(2000);    // 2000是顯示速度  
+                        box2.text('hello slide'); // 點粉色才會 show 顯示的字
+                        break;
+
+                    default:
+                        break;
+                }
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

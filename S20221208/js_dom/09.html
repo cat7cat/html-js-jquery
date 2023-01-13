@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="myH1">橘子</h1>
+    <a href="#">榴槤</a>
+
+    <button type="button" onclick="appendFun();">按!</button>
+    <button type="button" onclick="removeFun();">掰!</button>
+
+    <div id="myDiv">
+        <!-- 把greenP tag 丟進來這邊啦~~ -->
+    </div>
+
+
+
+    <script>
+        // 建立一個元件
+        const myH1 = document.getElementById('myH1');
+        const myA = document.getElementById('myA');
+
+        // console.log(myH1);
+        myH1.innerHTML = '<strong>香蕉</strong>';
+
+
+        // 把建好的元件丟到指定的地方
+        const myDiv = document.getElementById('myDiv');
+
+        // 建立createElement
+        function appendFun() {
+            const greenP = document.createElement('p');
+            greenP.textContent = '蘋果';
+            greenP.style.color = 'red';
+            console.log('greenP', greenP);
+
+            console.log('appendFun YAAAAAAA~');
+            myDiv.appendChild(greenP);
+            //appendChild 加到子節點最後面
+        };
+
+        // 把元件刪除 remove
+        // removeChild 子節點
+        function removeFun() {
+            // 找到我要刪除的節點
+            // const myP = document.querySelectorAll('#myDiv>p'); 刪除#myDiv的p
+            // console.log(myP);
+            // myP[0].remove();
+
+            // 找到刪除的節點
+            // 刪除他的子結點 myDiv.firstElementChild
+            // myDiv.removeChild(myDiv.firstElementChild);
+
+            myDiv.removeChild(myDiv.lastElementChild);
+        }
+        // let ad = appendFun();
+
+
+        function replaceFun() {
+            myDiv.lastElementChild.textContent = 'HI';
+        }
+    </script>
+</body>
+
+</html>

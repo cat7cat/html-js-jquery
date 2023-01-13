@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj</title>
+</head>
+<body>
+    <script>
+        let obj={
+            //變數 property
+            'name':'小貓',
+            'age':18,
+            'address':{'key':'淡水'},
+            // 方法 method
+            // 使用this的原因是因為如果上面obj改名，下面的指向不用全部跟著改，因為是吃相對位置
+            'helloFun':function(){
+                console.log('this name',this.name); //this上一層的物件裡的name，所以輸出"小貓"
+                let str=`Hello 我是${this.name}， 今年${this.age}歲，家住${this.address.key} `;
+                console.log(str);//Hello 我是小貓， 今年18歲，家住淡水 
+            },
+            // arrow箭頭函式this 指向外部的window
+            // 所以箭頭函式必須使用obj.name來抓value，無法使用this.name
+            'sleepFun':()=>{
+                console.log('sleepFun this',this);
+            }
+        }
+        console.log('obj',obj);
+        console.log('obj.name',obj.name);
+        console.log('obj.age',obj.age);
+        console.log('obj.address',obj.address.key);
+        obj.helloFun();//this name 小貓 & Hello 我是小貓， 今年18歲，家住淡水
+        obj.sleepFun();//sleepFun this Window，所以在使用箭頭函式時，請使用obj的變數名稱來抓
+
+        //學生obj，可以算三科加總及及均
+        let student={
+            //變數 property
+            'name':'amy',
+            'age':18,
+            'chi':70,
+            'eng':80,
+            'math':90,
+            // 方法 method
+            // sumFun加總
+            'sumFun':function(){
+                let sum=this.chi+this.eng+this.math;
+                console.log('sum=>',sum);
+                return sum;
+            },
+            // 去抓加總好的sumFun數值，在/3求得平均
+            'avgFun':function(){
+                let result=this.sumFun();
+                let avg=result/3;
+                console.log('avg=>',avg);
+            }
+        }
+        console.log('obj',student);
+        console.log('obj.name',student.name);//amy
+        console.log('obj.age',student.age);//18
+        console.log('obj.address',student.chi);//70
+        student.sumFun();//sum=>240@2次，因為在算平均時，有呼叫sumFun
+        student.avgFun();//avg=>80
+    </script>
+</body>
+</html>

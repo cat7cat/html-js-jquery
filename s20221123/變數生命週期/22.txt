@@ -1,0 +1,7 @@
+var varX = 2; //(办跑计)
+function cal() {
+console.log('ex varX', varX);//{FUNCTIONず场тvarX Τよ礚猭 陪ボ (undefined)
+var varX=4 ,  varY = 1; //(跋办跑计) FUNCTIONず场 紇臫FUNCTIONず场
+console.log('varX+varY', varX + varY);//{FUNCTIONず场тvarX璸衡 varX=4
+}
+console.log('varX', varX);//FUNCTION场 ぃFUNCTIONず场跋办跑计紇臫 varX=2

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人事中心</title>
+    <style>
+        form{
+            width: 70%;background-color: 
+            blanchedalmond; padding: 20px;  
+        }
+        p{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium; 
+            font-weight: bolder;
+        }
+        li{
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <aside style="float: left;
+                padding-bottom: 434px;
+                margin-right: 30px; 
+                width: 150px; 
+                background-color: rgb(203, 217, 231); 
+                text-align: center;">
+                <br>
+        <p style="border: 2px solid rgb(136, 179, 180);border-left: 5px solid rgb(102, 151, 170);">選單</p>
+        <ul>
+            <li>基本資料</li>
+            <li><a href="./hr.html">請假</li></a>
+            <li><a href="./salary.html">薪資單</li></a>
+            <li><a href="">出勤管理</li></a>
+        </ul>
+        <br>
+        <button>登出</button>
+    </aside>
+    <main>
+        <form>
+            <fieldset>
+                <legend style="background-color: rgb(255, 255, 255);">基本資料</legend>
+                <p>
+                    <label for="name" aria-required="true">姓名</label><br>
+                    <input type="text" name="name" id="name" value="NAME">
+                </p>
+                    <p>
+                <p>
+                    <label for="adress" aria-required="true">住址</label><br>
+                    <input type="text" name="adress" id="adress" value="adress"></p>
+                <p>
+                    <label for="type">特殊身分</label><br>
+                <select name="type">
+                    <option value="無">無</option>
+                    <option value="中低收入戶">中低收入戶</option>
+                    <option value="身心障礙者">身心障礙者</option>
+                    <option value="原住民">原住民</option>
+                </select>
+                </p>
+                <p>
+                    <label for="start">生日</label><br>
+                    <input type="datetime-local" name="startdate" id="start">
+                </p>
+                <p>
+                    <label for="tel">電話號碼</label><br>
+                    <input type="tel" name="tel" size="10" placeholder="例:0912-345678">
+                </p>
+                <p>
+                    <label>性別</label>
+                    <input type="radio" name="radio" id="yes">
+                    <label for="yes">生理男</label>
+                    <input type="radio" name="radio" id="no">
+                    <label for="no">生理女</label>
+                </p>
+                <p>
+                    <label for="">技能:</label>
+                    <input type="checkbox" name="skill[]" id="">
+                    <label for="">HTML</label>
+                    <input type="checkbox" name="skill[]" id="">
+                    <label for="">CSS</label>
+                    <input type="checkbox" name="skill[]" id="">
+                    <label for="">Javascript</label>
+                    <input type="checkbox" name="skill[]" id="">
+                    <label for="">PHP</label>
+                    <input type="checkbox" name="skill[]" id="">
+                    <label for="">C++</label>
+                </p>
+                <p>
+                    <label for="why">備註</label><br>
+                    <textarea name="" id="why" cols="30" rows="10">輸入文字</textarea>
+                </p>
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

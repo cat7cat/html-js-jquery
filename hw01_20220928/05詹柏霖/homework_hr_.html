@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.box{
+    width: 240px;
+    height: 200px;
+    border: 2px solid ;color:rgb(193, 199, 9);
+    text-align: center;
+    line-height: 300px;}
+        
+ 
+    .box2{
+        /* SHORTHAND 程式碼在一行寫完 */
+        background:brown url('https://picsum.photos/200/300.jpg') no-repeat;
+        background-size: cover;
+
+    }
+    .box3{
+        background-color:pink;
+        background-image: url('https://picsum.photos/id/237/200/300');
+        background-position: left;}
+
+
+</style>
+<body>
+    <fieldset>
+<legend>考核資料</legend>
+<label >姓名</label>
+<input text="姓名" name="王大頭" id="" value="王大頭"><br><br>
+<label for="start">出生年月日：</label>
+
+<input type="date" id="start" name="trip-start"
+       value=""
+       min="2018-01-01" max=""><BR><BR>
+
+<label >性別</label>
+<input type="radio" name="性別" id="男">
+<label for="男">男</label>
+<input type="radio" name="性別" id="女">
+<label for="女">女</label> <BR><BR>  
+
+<label for="">最高學歷</label>
+<input type="radio" name="最高學歷" id="博士">
+<label for="博士">博士</label>
+<input type="radio" name="最高學歷" id="碩士">
+<label for="碩士">碩士</label>
+<input type="radio" name="最高學歷" id="大學">
+<label for="大學">大學</label>
+<input type="radio" name="最高學歷" id="高中">
+<label for="高中">高中</label>
+<BR><BR>
+
+
+    自我評核<BR><br>
+
+
+            
+                <textarea name="" id="dream" cols="30" rows="10">
+</textarea><br><br>
+<label for="dream" aria-checked="true">職涯能力</label><BR>
+  <input type="checkbox" id="cbox1" value="career ability">
+  <label for="cbox1">文書處理</label>
+  <input type="checkbox" id="cbox2" value="career ability">
+  <label for="cbox2">程式語言</label>
+  <input type="checkbox" id="cbox3" value="career ability">
+  <label for="cbox3">辦公室水電</label>
+  <input type="checkbox" id="cbox4" value="career ability">
+  <label for="cbox4">中國好聲音得獎者</label><br><br>
+  <label for="dream">性格測驗</label>
+  <table  border="2">
+    
+    <tr>
+        <th>
+            題目
+        </tH>
+        <th>
+            A
+        </th>
+        <th>
+            B
+        </th> 
+        <th>
+            C
+        </th> 
+        <th>
+            單選
+        </th> 
+    <tr>
+        <td>
+            當你在森林看到一隻跳入草叢的動物，你的直覺是什麼？
+        </td>
+        <td>
+            有危險，快離開。
+        </td>
+        <td>
+            有點擔心，但決定走近看看。
+        </td>
+        <td>
+            從不畏懼，往草叢跑去。
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            中秋節地球人在烤肉，會不會對月球造成污染？
+        </td>
+        <td>
+            會。
+        </td>
+        <td>
+            不會。
+        </td>
+        <td>
+            我不在意。
+        </td>
+        <td>
+        </td>
+    </tr>  
+    <tr>
+        <th COLspan="5">
+            計分說明
+        </th>
+        <!-- <td> -->
+            
+        <!-- </td>
+        <td>
+            
+        </td>
+        <td>
+            
+        </td>
+        <td>
+        </td> -->
+    </tr>     
+    <tr>
+        <th colspan="5">
+            每一題A得3分，B得2分，C得1分。
+        </th
+        <!-- <td> </-->
+            
+            <!-- </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+            </td> -->
+    </tr>
+    <tr>
+        <th colspan="5">
+            總得分：
+        </th
+        <!-- <td> -->
+            
+            <!-- </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+            </td> -->
+    </tr>
+</table>
+<BR>
+    <h4>選擇一張符合你性格的照片</h4>
+    <div class="box box2" href="www.youtube.com"></div>
+    <div class="box box3" href="w3school.com"></div>
+<BR><BR>
+<input type="submit" value="一鍵送出">
+    </fieldset>
+</body>
+</html>

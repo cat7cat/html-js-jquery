@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人資表單</title>
+<style>
+    legend{
+    color: red;
+    text-align: center;
+    font-size: 200%;
+    }
+    /* fieldset比較特別 */
+    fieldset { min-width: 100px;}
+    form{
+        background-color:papayawhip;text-align: center;
+        width: 100%; height: 100%;
+    }
+
+    label{color:darkslategrey;
+
+    }
+</style>
+
+</head>
+<body>
+
+    <fieldset>
+        <legend>人資表單</legend>
+        <form action="">
+        <p>
+            <label for="name-id">姓名:</label>  <br>  
+            <input type="text" name="name" id="name-id" value="請寫下你的姓名" > 
+        </p>
+        <p>
+            <label for="money">職稱:</label> <br> 
+            <input type="text" name="name" id="name-id" value="請寫下你的職稱"> 
+        </p>
+        <p>
+            <label for="money">聯絡方式:</label> <br> 
+            <input type="text" name="name" id="name-id" value="請寫下你的電話"> 
+        </p>
+
+        <p>
+        <label for="radio">可以接受上班的時間:</label>
+        <input type="date" name="" id="">
+        </p>
+
+        <p>
+            <label for="sign">工作經歷:</label> 
+            <textarea name="" id="" cols="10" rows="1"></textarea>
+        </p>
+        <label for="">目前擁有的技能:</label><br>
+            <input type="checkbox" name="habit[]" id=""
+            <label for="">機車駕照</label><br>
+        
+            <input type="checkbox" name="habit[]" id=""
+            <label for="">文書能力</label><br>
+            
+            <input type="checkbox" name="habit[]" id=""
+            <label for="">語言能力</label><br>
+
+
+        <p>
+            <label for="">可以接受的休假制度:</label><br>
+                <input type="checkbox" name="habit[]" id=""
+                <label for="">日班</label><br>
+                <input type="checkbox" name="habit[]" id=""
+                <label for="">中班</label><br>
+                <input type="checkbox" name="habit[]" id=""
+                <label for="">晚班</label><br>
+                <input type="checkbox" name="habit[]" id=""
+                <label for="">皆可配合</label><br>
+        </p>
+
+        <label for="area">理想工作的地點:</label>
+        <select name="area" id="area">
+            <option value="1">北</option>
+            <option value="1">中</option>
+            <option value="1">南</option>
+            <option value="1">東</option>
+        </select>
+        
+        <p>
+        <label for="sign">自傳:</label> <br>
+        <textarea name="" id="" cols="100" rows="4"></textarea>
+        </p>
+
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+    </form>
+    </fieldset>
+
+</body>
+</html>

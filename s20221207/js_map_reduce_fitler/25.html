@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 公司發年終
+        // employee =[3,4,5,6,7];
+        // EX1:發兩個月總共要發多少?
+        // EX2:每個人都發兩個月，但領五萬的是傑出員工 發四個月 總共要發多少?
+
+        // EX1
+        let employee = [3, 4, 5, 6, 7];
+        let employeeBonus = employee.map((value, key) => {
+            return value * 2;
+        });
+        console.log(employeeBonus);
+
+        // EX2
+        // map()會取用原始陣列的內容來進行計算
+        // 並且回傳計算後的值給新陣列，而且不影響原始陣列的值
+        let employeeBonus2 = employee.map((value, key) => {
+            if (value == 5) {
+                return value * 4;
+            } else {
+                return value * 2;
+            }
+        });
+        console.log(employeeBonus2);
+        // reduce 加總
+        // total initvalue 最初始的值
+        // value currentvalue 目前的值
+        // reduce()可以回傳陣列中每個元素 total
+        // 並且與value值進行運算 例如 total + value
+        // 最後回傳計算後的單一值，並不是整個陣列
+        let sum2 = employeeBonus2.reduce((total, value) => {
+            console.log('this is total', total);
+            console.log('this is value', value);
+            return total + value;
+        });
+        console.log('this is sum2', sum2);
+
+        // filter 篩選資料
+        // filter() 可以設定條件，並回傳指定值
+        // 例如 array[3,4,5,6,7]，當指定值小於5 filter(value)
+        // 則回傳 3 4 
+        let employeeBonusFilter = employee.filter((value) => {
+            return value < 5;
+        });
+        console.log('this is employee',employee);
+        console.log('this is employeeBonusFilter', employeeBonusFilter);
+    </script>
+</body>
+
+</html>

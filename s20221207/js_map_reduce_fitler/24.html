@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 公司發年終
+        // employee = [3,4,5,6,7];
+        // ex1. 發兩個月總共要發多少呢
+        // ex2. 每個人都發兩個月 但領五萬的是傑出員工 四個月 總共要發多少?
+  
+        // let employeeArr = [3,4,5,6,7]; 
+        // let employeeBonusArr = employeeArr.map((value,key)=>{
+        //     return value*2;
+        // });
+        // console.log(employeeBonusArr);
+                
+        //map透過函式內所回傳的值組合成一個新陣列,且不會更動到原來的陣列
+        let employeeArr = [3, 4, 5, 6, 7];
+        let employeeBonusArr = employeeArr.map((value, key) => {
+            if (value == 5) {
+                return value * 4;
+            } else {
+                return value * 2;
+            }
+        });
+        console.log(employeeBonusArr);
+
+        // reduce是return一個值,而不是一個新陣列
+        // 常用於累加或比較
+        // reduce 加總
+        // total initValue 最原始的值
+        // value currentValue
+        // let i = 0;
+        let sum = employeeBonusArr.reduce((total, value) => {
+            // i++;
+            // console.log('i',i);
+            console.log('total', total);
+            console.log('value', value);
+            return total + value;
+        });
+        console.log('sum', sum);
+
+        // filter 篩選資料
+        // filter回傳回來一個新陣列,且不會更動到原來的陣列
+        // 對於沒有值的元素也不會起作用
+        let employeeArrFilter = employeeArr.filter((value) => {
+            return value < 5;
+        })
+        console.log('employeeArr', employeeArr);
+        console.log('employeeArrFilter', employeeArrFilter);
+
+    </script>
+</body>
+
+</html>

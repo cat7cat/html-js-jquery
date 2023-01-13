@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flexbox */
+        /* 3box row*/
+
+        /* mobile red */
+        /* table green */
+        /* desktop blue */
+        /* 練習 p mobile font-size 24px red*/
+        /* 練習 p table font-size 20px  green */
+        /* 練習 p desktop font-size 16px  blue*/
+
+        /* 練習
+            desktop 3
+            table 2
+            mobile 1
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            font-size: 24px;
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            /* height: 1000px; */
+            flex-wrap: wrap;
+            background: #ccc;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            /* padding: 50px 10px; */
+        }
+
+        .item {
+            flex-basis: 80%;
+            height: 300px;
+            background-color: lightblue;
+            margin-bottom: 30px;
+
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+
+            /* table */
+            h1 {
+                color: green;
+            }
+
+            p {
+                font-size: 16px;
+                color: green;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                background: #ccc;
+                justify-content: flex-start;
+                align-content: center;
+                margin: 0 auto;
+            }
+            
+            .item {
+                margin-left: 5%;
+                margin:0 auto;
+                flex-basis: 45%;
+                background-color: red;
+            }
+            /* .container::after{
+                content: "";
+                flex: auto;
+            } */
+
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* desktop */
+            h1 {
+                color: blue;
+            }
+
+            p {
+                font-size: 12px;
+                color: blue;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                background: #ccc;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .item{
+                flex-basis: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <div class="container">
+        <div class="item itme1">1</div>
+        <div class="item itme2">2</div>
+        <div class="item itme3">3</div>
+        <!-- <div class="item itme3">4</div>
+        <div class="item itme3">5</div>
+        <div class="item itme3">6</div> -->
+    </div>
+</body>
+
+</html>

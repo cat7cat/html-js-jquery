@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" id="myBtn">myBtn</button>
+    <button type="button" id="myBtn2">myBtn2</button>
+    <button type="button" id="myBtn3">myBtn3</button>
+    <script>
+        // 公司發年終
+
+        // employee = [3,4,5,6,7];
+        // ex1.發兩個月總共要發多少呢
+        // ex2.每個人都發兩個月 但領五萬的是傑出員工 四個 總共要發多少?
+
+        // Map 函式
+        // 可以找陣列中的KEY與VALUE值
+        // 本例中，找到value值並加上月薪大於5萬的條件再作運算
+
+        let employeeArr = [3, 4, 5, 6, 7];    
+        let employeeBonusArr = employeeArr.map((value, key) => {
+            if (value == 5) {  //月薪等於5萬的
+                return value * 4;  //發4個月
+            } else {
+                return value * 2;  //其他發2個月
+            }
+        });
+        console.log(employeeBonusArr);
+
+// JavaScript Array map()
+        // 陣列 (arrray) 的 map() 方法用來遍歷一個陣列中的每個元素，將元素分別傳入你指定的函數，最後將所有函數的返回值組成一個新的陣列。
+
+        // 語法：
+
+        // var newArray = oldArray.map(callback[, thisArg])
+        // 參數 callback 是一個函數，用來產生新陣列的元素，傳入的三個參數分別是：
+        // currentValue 代表目前處理到的元素的值
+        // index 代表目前處理到的元素的索引位置
+        // array 代表陣列本身
+        // 根據 callback 的執行結果，返回 true 表示測試通過；返回 false 則表示失敗
+        // thisArg 代表 callback 裡面的 this 是指向哪一個物件
+        // map() 執行結果會返回一個新陣列
+        // 用法：
+
+        // var numbers = [1, 4, 9];
+
+        // var doubles = numbers.map(function(num) {
+        //     return num * 2;
+        // });
+
+        // // 輸出 [2, 8, 18]
+        // console.log(doubles);
+
+        // // 輸出 [1, 4, 9]
+        // console.log(numbers);
+
+
+
+        let i = 0;
+        let sum = employeeBonusArr.reduce((total, value) => {
+
+            
+            i++;
+            console.log('i', i);
+            console.log('total', total);
+            console.log('value', value);
+            return total + value;
+        });
+        console.log('sum', sum);
+
+        // Reduce 函式 - 會對陣列中的每一個元素，由左至右傳入指定的函數，最後返回一個累加的值;
+        // reduce( ) 方法會對每一個 Array 元素執行一個特定方法，並回傳值。該回傳值將繼續延續至下一個元素執行特定方法時調用。常用於簡單的累加計算，亦可以延伸運用於 Array 的扁平化、特定值統計等。
+        
+        // 語法
+        // arr.reduce(callback[accumulator, currentValue, currentIndex, array], initialValue)
+
+        // 第一個參數為一個方法，用於處理 Array 中的元素。該方法有四個參數供使用
+        // - accumulator：累加器，為上一次呼叫方法時的回傳值。若為第一次呼叫，則視有無提供初始值(initialValue)，決定累加器的值。
+        // - currentValue：迭代 Array 時，所處理到的目前值
+        // - currentIndex：迭代 Array 時，所處理到的目前值的索引值
+        // - array：呼叫 reduce 方法的原 Array
+        // 第二個參數為累加器的初始值。若有提供，則作為累加器的初始值；若無提供，則使用 Array 第一個值，作為初始值，並從 Array 第二個值開始迭代。
+
+        
+        let employeeArrFilter = employeeArr.filter((value) => {
+            return value < 5;
+        })
+        console.log('employeeArr', employeeArr);
+        console.log('employeeArrFilter', employeeArrFilter);
+
+        // Filter 函式 - 加上條件作過濾，取出符合條件的值回傳
+        // filter 篩選資料
+        // 陣列中常用的方法還有 filter() 跟 map()，filter() 方法可以根據指定的篩選條件，從陣列裡挑出符合的元素。此外，這兩種方法篩選完結果以後，都會回傳一個新的陣列。
+
+        // filter 方法的語法
+        // var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+
+    </script>
+</body>
+
+</html>

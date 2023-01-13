@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  */
+        h1 {
+            color: blue; text-align:center;
+        }
+        legend{background-color:rgb(0, 255, 221) }
+        #basic{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1  >應徵人員面談資料表</h1>
+
+    <form action="">
+        <fieldset>
+            <legend >基本資料</legend>
+            
+            <P>
+                <label for="name" >姓名：</label>
+                <input type="text" name="name" id="name" value="">
+            </P>
+            <p>
+                <label for="password">身分字號：</label>:</label>
+                <input type="password" name="password" id="password" value="">
+            </p>
+            <P>
+                <label for="radio">性別：</label>
+                <input type="radio" name="radio" id="男" value="">
+                <label for="男">男</label>
+                <input type="radio" name="radio" id="女" value="">
+                <label for="女">女</label>
+            </P>
+            <P>
+                <label for="date">出生年月日：</label>
+                <input type="date" name="date" id="date" value="">
+            </P>
+            <P>
+                <label for="tel">聯絡電話：</label>
+                <input type="tel" name="tel" id="tel" value="">
+            </P>
+            <P>
+                <label for="email">電子信箱：</label>
+                <input type="email" name="email" id="email" value="">
+            </P>
+            <P>
+                <label for="add">通訊地址：</label>
+                <textarea name="" id="add" cols="50" rows="1"></textarea>
+            </P>
+
+        </fieldset>
+        <fieldset>
+            <legend>學/經歷</legend>
+            <P>
+                <label for="">語言:</label>
+                <input type="checkbox" name="">
+                <label for="">英語</label>
+                <input type="checkbox" name="">
+                <label for="">日語</label>
+                <input type="checkbox" name="">
+                <label for="">台語</label>
+                <input type="checkbox" name="">
+                <label for="">國語</label>
+            </P>
+            <p>
+                <label for="area">學歷：</label>
+                <select name="area" id="area">
+                    <option value="1">碩士</option>
+                    <option value="2">學士</option>
+                    <option value="3">高中</option>
+                </select>   
+            </p>
+        </fieldset>
+        <p>
+            <label for="money">希望待遇：</label>
+            <input type="number" name="money" id="money" value="">
+        </p>
+        <p>
+            <hr>
+            <input type="submit" value="送出">
+            <input type="reset" value="重整">
+
+        </p>
+    </form>
+
+</body>
+
+</html>

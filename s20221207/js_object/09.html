@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object練習</title>
+</head>
+
+<body>
+    <script>
+
+        let studentObj = {
+            'name': 'amy',
+            'age': 10,
+            'chinese': 70,
+            'english': 80,
+            'math': 90,
+
+            'sumfun': function () {
+                let sum = this.chinese + this.english + this.math;  //在function用this是指向上一層的obj
+                console.log('sum是', sum);
+                return sum;
+            },
+            'avgfun': function () {
+                // let avg = sumfun() / 3;
+                // console.log('avg是', avg);
+                // return avg;
+                let result = this.sumfun();
+                let avg = result / 3;
+                console.log('avg是', avg);
+            }
+        }
+        //箭頭函式無法使用this，會指向外部的window
+
+        console.log('studentObj', studentObj);
+        console.log('studentObj.name', studentObj.name);
+        console.log('studentObj.age', studentObj.age);
+        console.log('studentObj.chinese', studentObj.chinese);
+        console.log('studentObj.math', studentObj.math);
+        console.log('studentObj.english', studentObj.english);
+        studentObj.sumfun();
+        studentObj.avgFun(); //呼叫obj裡的avgfun()
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

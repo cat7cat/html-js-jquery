@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習</title>
+</head>
+
+<body>
+    <script>
+        // Map 函式
+        // 可以找陣列中的KEY與VALUE值
+        // 本例中，找到value值並加上月薪大於5萬的條
+        // 件再作運算
+        let emp = [3, 4, 5, 6, 7];
+        console.log(emp);
+        let empArr = emp.map((value, key) => {
+            if (value >= 5) { //月薪大於5萬的總共發4個月
+                return value * 4;
+            } else {
+                return value * 2; //月薪小於5萬只發2個月
+            }
+            return value * 2;
+        });
+        console.log(empArr);
+
+        // Reduce 函式
+        // 會對陣列中的每一個元素，由左至右傳入指定
+        // 的函數，最後返回一個累加的值;
+        let sum = empArr.reduce((total, value) => {
+            console.log('total', total);
+            console.log('value', value);
+            return total + value;
+        });
+        // console.log(sum)加總的結果
+        console.log(sum);
+
+        // Filter 函式
+        // 加上條件作過濾，取出符合條件的值回傳
+        let emp1 = [3, 4, 5, 6, 7];
+        let employfilter = emp1.filter((value) => {
+            return value < 5;
+        })
+        console.log('employfilter', employfilter);
+        console.log('empArr', empArr);
+
+    </script>
+</body>
+
+</html>

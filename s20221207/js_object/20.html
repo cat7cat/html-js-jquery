@@ -1,0 +1,23 @@
+    <script>  
+    /*
+    property為物件屬性,類似PHP多維振烈的key,一個key配一個value,
+    屬性的值不限種類可以為數字,字串,陣列,函式,另外一個物件
+    物件內的function會指向該物件,主要用於取得該物件其他屬性
+    */ 
+    const obj = {
+        'name':'amy',
+        'age':18,
+        'chinese':70,
+        'english':80,
+        'math':90,
+        'sumFn':function(){
+            let sum = this.chinese +this.english +this.math;
+            return sum
+        },
+        'avgFn':function(){
+            let result = this.sumFn();
+            console.log(result / 3);
+        }
+    }
+    obj.avgFn();
+    </script>

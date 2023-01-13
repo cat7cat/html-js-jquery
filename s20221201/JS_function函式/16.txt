@@ -1,0 +1,30 @@
+function =
+把程式碼打包，要用的時候可以呼叫它，可重複利用
+
+function 名稱(放入的值,值2){   //可沒有名稱=匿名函式 ，  ()=可在fun外部放值傳入函式
+    要執行的程式碼
+}
+
+return : 可以將function程式處理完畢的結果傳出 
+
+(利用此可將函式當作參數傳到另一個函式
+ex. function calFun(){
+            let num1Vaule = Number(num1Input.value);
+            let num2Vaule = Number(num2Input.value);
+            let area = getArea(num1Vaule,num2Vaule); //將另一函式回傳值 存入變數   
+	    if(area >= 500){
+                console.log('面積500以上');
+            }
+}
+
+
+function getArea(num1Vaule,num2Vaule){
+            let result = num1Vaule * num2Vaule;
+            console.log('Area',result);
+            return result; //回傳值
+        }
+)
+
+
+
+函式的呼叫 : fun();  

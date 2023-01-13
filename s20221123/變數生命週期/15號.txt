@@ -1,0 +1,51 @@
+ <script>
+
+ var varX=2;
+ var varY=4;
+
+	猵1 :
+
+        function cal(){
+            //function ノ办 { ノ办穦絛瞅ず薄猵 var 籔 let  }
+
+	    var varX=5;//function ず varX 结
+	    console.log('varX',varX);//varX 5            
+
+            var varY=1;//function ず varY 结
+            console.log('varX+varY',varX+varY);varX+varY 6
+        }
+
+	cal();
+	console.log('varX',varX);//varX 2
+        console.log('varY',varY);//varY 4
+
+
+	猵2 :
+
+	function cal(){
+            //function ノ办 { ノ办穦絛瞅ず薄猵 var 籔 let  }
+
+	    //嘿跑计嘿functionず礚 "varX" 穦┕糷т
+	    console.log('varX',varX);//varX 2 
+
+            varY=1;//嘿跑计嘿结functionず礚 "varY" 穦┕糷тт穦糷"办跑计"
+
+            console.log('varX+varY',varX+varY);//varX+varY 3
+        }
+        cal();
+        console.log('varX',varX);//varX 2
+        console.log('varY',varY);//varY 1
+
+	var 籔 let :
+	var Τfuncuion() { 玛var  }
+	let 璶Τ 常玛 !!
+
+	ex: for(var i=n; i<m; i++){}
+	var : 玛ぃи !!
+
+	let => []  {}  () –常玛
+	let : и
+
+	const 盽计 
+	ス礚猭と 03:23 2022/11/23结
+</script>

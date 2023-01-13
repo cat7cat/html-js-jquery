@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array練習</title>
+</head>
+
+<body>
+    <script>
+
+        // 發年終
+        let employee = [3, 4, 5, 6, 7];
+        // 發兩個月要發多少???
+        // map 將原始的變數運算後重新組合一個新的陣列(把陣列裡的值做計算，重組成另外一個陣列)
+        let employeebonus = employee.map((value, key) => {
+            return value * 2;
+        });
+        console.log(employeebonus)
+
+
+        // reduce 加總用的函式
+        // total initValue 最原始的值
+        // value currentValue
+
+        // 每個人都發兩個月，但領五萬的是傑出員工 四個 總共要發多少???
+
+
+        // reduce 整合整個陣列，將每個元素與回傳的值再次作運算，將陣列化為一個值
+        let i = 0;
+        let sum = employeeBonusArr.reduce((total, value) => {
+            i++;
+            console.log('i', i);
+            console.log('total', total);
+            console.log('value', value);
+            return total + value;
+        });
+        console.log('sum', sum);
+
+
+        // filter 用於搜尋符合條件的資料
+        let employeeArrFilter = employeeArr.filter((value) => {
+            return value < 5; //小於5的丟進新陣列
+        })
+
+    </script>
+</body>
+
+</html>

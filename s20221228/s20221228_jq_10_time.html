@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+
+<body>
+    <div class="digiImg">
+        <div id="ck1" class="mg1"></div>
+        <div id="ck2" class="mg2"></div>
+        <div class="mgd"></div>
+        <div id="ck3" class="mg3"></div>
+        <div id="ck4" class="mg4"></div>
+        <div class="mgd"></div>
+        <div id="ck5" class="mg5"></div>
+        <div id="ck6" class="mg6"></div>
+    </div>
+
+    <script>
+        function refresh() {
+            // 綁定時間
+            const nt = new Date();
+            // console.log('nt', nt);
+            const nh = nt.getHours(); // 15
+            const nm = nt.getMinutes(); // 45
+            const ns = nt.getSeconds(); // 50
+            // 1
+            // 5
+            // 4
+            // 5
+            // 5
+            // 0
+            const
+                nk1 = Math.floor(nh / 10),
+                nk2 = nh % 10,
+                nk3 = Math.floor(nm / 10),
+                nk4 = nm % 10,
+                nk5 = Math.floor(ns / 10),
+                nk6 = ns % 10;
+
+
+            // console.log('nh', nh);
+            // console.log('nm', nm);
+            // console.log('ns', ns);
+            document.getElementById('ck1').className = `mg${nk1}`;
+            document.getElementById('ck2').className = `mg${nk2}`;
+            document.getElementById('ck3').className = `mg${nk3}`;
+            document.getElementById('ck4').className = `mg${nk4}`;
+            document.getElementById('ck5').className = `mg${nk5}`;
+            document.getElementById('ck6').className = `mg${nk6}`;
+
+
+            document.getElementsByClassName('mgd')[0].style.opacity = 1;
+            document.getElementsByClassName('mgd')[1].style.opacity = 1;
+
+            // 1000 開 500 關 
+
+            // 閃爍 :
+            setTimeout(() => {
+                document.getElementsByClassName('mgd')[0].style.opacity = 0;
+                document.getElementsByClassName('mgd')[1].style.opacity = 0;
+            }, 500)
+
+        }
+
+
+
+
+
+        // 每一秒 會抓一次時間
+        setInterval(refresh, 1000);
+        // 進來程式先跑一次        
+        refresh();
+    </script>
+</body>
+
+</html>

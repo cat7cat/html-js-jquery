@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>月出月沒時刻</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <br>
+    <h1 style="text-align: center;">月出月沒時刻</h1>
+    <br>
+
+    <table id="" class="table table-striped" style="width:100%">
+        <thead>
+            <!-- thead tbody tfoot 三個 th / td 要相等 -->
+            <!-- 抓出三段時間 放在table 時間一 時間二 時間三 -->
+
+            <!-- 0 night -->
+            <!-- 6 day -->
+            <!-- 12 day -->
+            <!-- 18 night -->
+
+            <tr>
+                
+                <th>縣市</th>
+                <th>日期</th>
+                <th>月出時刻</th>
+                <th>月出方位角</th>
+                <th>月沒時刻</th>
+                <th>月沒方位角</th>
+                <th>過中天</th>
+                <th>仰角</th>
+            </tr>
+        </thead>
+        <tbody class="tt">
+            <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+        </tbody>
+    </table>
+    <div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    </script>
+    <script>
+        $(function () {
+            const mydiv = $('.tt')
+
+            $.ajax({
+                type: "get",
+                url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/A-B0063-001?Authorization=CWB-401B6981-546F-4EC4-8942-634E110D323F",
+                data: "data",
+                dataType: "json",
+                success: function (res) {
+                    console.log(res.records.locations);
+                    let data = (res.records.locations.location[5].time);
+                    //                 console.log(data[6].weatherElement[0].time[0].startTime);
+                    //                 const time0 = new Date(data[0].weatherElement[2].time[0].startTime);
+                    //         const timeText0 = `${time0.getFullYear()} / ${time0.getMonth()+1} / ${time0.getDate()}`;
+                    $.each(data.slice(0,99), function (key, value) {
+                        if(value.parameter[1].parameterValue==''){
+                            return
+                        }
+                        let text = `
+                         <tr>
+                            
+                            <td>${res.records.locations.location[5].locationName}</td>
+                            <td>${value.dataTime}</td>
+                            <td>${value.parameter[0].parameterValue}</td>
+                            <td>${value.parameter[1].parameterValue}</td>
+                            <td>${value.parameter[4].parameterValue}</td>
+                            <td>${value.parameter[5].parameterValue}</td>
+                            <td>${value.parameter[2].parameterValue}</td>
+                            <td>${value.parameter[3].parameterValue}</td>
+                        </tr>
+       `
+                        mydiv.append(text)
+                    })
+                    
+                }
+            });
+
+        })
+        $('#example').DataTable({
+
+        });
+    </script>
+</body>
+
+</html>

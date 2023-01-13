@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單form-作業</title>
+    <style>
+        *{
+            font-family: 微軟正黑體;
+            font-weight: bold;
+        }
+        body{
+            width: auto;
+            height: auto;
+        }
+        form{
+            margin: 30px;
+        }
+        input,label{
+            font-size: 18px;
+        }
+        .block{
+            padding: 5px;
+            width: auto;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>面試人員資訊</legend>
+        <form action="">
+        <!-- input text 文字方塊 -->
+        <!-- name => 送到後端 -->
+        <!-- value 預設值 -->
+        <div class="ac block">
+            <label for="Ac">姓名: </label>
+            <input type="text" name="Ac" id="Ac" placeholder="請輸入姓名">
+        </div>
+        <div class="bc block"></div>
+            <label for="Bc">地址: </label>
+            <input type="text" name="Bc" id="Bc" placeholder="請輸入地址">
+        </div>
+        <!-- <div class="pa block">
+            <label for="Pa">Password: </label>
+            <input type="password" name="Pa" id="Pa" placeholder="Password">
+            <input type="submit" value="Password"><br>
+        </div> -->
+        <div class="nu block">
+            <label for="Nu">手機號碼 : </label>
+            <input type="number" placeholder="請輸入手機號碼" oninput="if(value.length>10)value=value.slice(0,10);" ondrop="return false;" onpaste="return false;"onkeypress="return event.charCode>=48 && event.charCode<=57" required/>        
+        </div>
+        <!-- <div class="co block">
+            <label for="Co">Color:</label>
+            <input type="color" name="Co" id="Co" >
+            <input type="submit" value="Color"><br>
+        </div> -->
+        <div class="em block">
+            <label for="Em">E-mail:</label>
+            <input type="email" name="Em" id="Em" placeholder="E-mail">
+        </div>
+        <div class="dt block">
+            <label for="Dt">出生年月日 : </label>
+            <input type="date" type="month" name="Dt" id="Dt">
+        </div>
+        <div class="rd block">
+            <label for="radio4">最喜歡的程式語言 : </label>
+            <input type="radio" name="radio4" id="radio1">
+            <label for="radio1">HTML</label>
+            <input type="radio" name="radio4" id="radio1">
+            <label for="radio1">CSS</label>
+            <input type="radio" name="radio4" id="radio1">
+            <label for="radio1">Javascript</label>
+            <input type="radio" name="radio4" id="radio1">
+            <label for="radio1">Php</label>
+        </div>
+        <div class="ch block">
+            <label for="Ch">興趣 : </label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Sleep</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Game</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Sport</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Watch</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Listen</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Program</label>
+            <input type="checkbox" name="Ch" id="Ch">
+            <label for="Ch">Read</label>
+        </div>
+        <br>
+        <div class="button">
+            <button type="submit" width="100px">提交</button>
+            <button type="reset">重設</button>
+        </div>
+    </fieldset>
+</body>
+</html>

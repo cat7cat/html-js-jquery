@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div p {
+            color: red;
+        } */
+
+        /* div > p {
+            color: green;
+        } */
+
+        div ~ p {
+            color: green;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 1.Simple selectors -->
+
+    <!-- 
+        Combinators
+        descendant selector (space) => 後代全部 子層全部
+        child selector (>) =>只有一層後代
+        adjacent sibling selector (+) =>鄰近的兄弟層
+        general sibling selector (~) =>後面全部的兄弟層S
+        , => h1 , h2 ,h3 都有時
+     -->
+
+     <p>
+        Lorem ipsum dolor sit amet2222.
+     </p>
+     <p>
+        Lorem ipsum dolor sit amet222.
+     </p>
+     <p>
+        Lorem ipsum dolor sit amet2222.
+     </p>
+
+     <div>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </span>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+     </div>
+     
+     <p>
+        Lorem ipsum dolor sit amet2222.
+     </p>
+     <p>
+        Lorem ipsum dolor sit amet222.
+     </p>
+     <p>
+        Lorem ipsum dolor sit amet2222.
+     </p>
+     
+
+    
+</body>
+</html>

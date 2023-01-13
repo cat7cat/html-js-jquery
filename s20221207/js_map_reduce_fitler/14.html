@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" id="myBtn">myBtn</button>
+    <button type="button" id="myBtn2">myBtn2</button>
+    <button type="button" id="myBtn3">myBtn3</button>
+    <script>
+        // 公司發年終
+        // employee = [3,4,5,6,7];
+        // ex1.發兩個月總共要發多少呢
+        // ex2.每個人都發兩個月 但領五萬的是傑出員工 四個 總共要發多少?
+        let employeeArr = [3, 4, 5, 6, 7];
+        // 宣告陣列，並在陣列中加入數值。
+        let employeeBonusArr = employeeArr.map((value, key) => {
+            // map 是用於將陣列裡面的值，成上固定數值，且重新存成陣列。
+            if (value == 5) {
+            // 如果value值等於5就要將數值*4並且回傳。
+                return value * 4;
+            } else {
+            // 其他value值*2並且回傳。
+                return value * 2;
+            }
+        });
+        console.log(employeeBonusArr);
+        // 輸出改變後的陣列在console。
+
+        // reduce 加總
+        // total initValue 最原始的值
+        // value currentValue
+        let i = 0;
+        let sum = employeeBonusArr.reduce((total, value) => {
+            // reduce是將陣列內的數值加總，並且輸出，到sum中，讓他可以取用。
+            i++;
+            // 計算累加次數。
+            console.log('i', i);
+            // 現在累加值。
+            console.log('total', total);
+            // 現在要加進total內的值。
+            console.log('value', value);
+            return total + value;
+        });
+        console.log('sum', sum);
+        // 輸出加總值。
+
+        // filter 塞選資料
+        let employeeArrFilter = employeeArr.filter((value) => {
+            // 只留下符合條件的陣列。
+            return value < 5;
+        })
+        // 工程師不會通靈
+        console.log('employeeArr', employeeArr);
+        // 顯示一開始的陣列。
+        console.log('employeeArrFilter', employeeArrFilter);
+        // 顯示塞選過後的陣列。
+    </script>
+</body>
+
+</html>

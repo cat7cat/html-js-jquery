@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的!</title>
+    <style>
+        table {
+            width: 30%;
+        }
+        /* 邊框1px */
+        table,th,tr,td{
+            border: 1px solid;
+        }
+        /* 文字至中 */
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <!-- 有個巨大錯誤，只有第一排是th，其他是td啦 -->
+        <tr>
+            <th>節數</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+        </tr>
+
+        <tr>
+            <td>早自習</td>
+            <td colspan="5"></td>
+            <!-- <td>二</td> -->
+            <!-- <td>三</td> -->
+            <!-- <td>四</td> -->
+            <!-- <td>五</td> -->
+        </tr>
+
+        <tr>
+            <td>第一節</td>
+            <td rowspan="2">國語</td>
+            <td colspan="3">數學</td>
+            <!-- <td>三</td> -->
+            <!-- <td>四</td> -->
+            <td>國語</td>
+        </tr>
+
+        <tr>
+            <td>第二節</td>
+            <!-- "30px">一</td> -->
+            <td>自然</td>
+            <td>音樂</td>
+            <td>國語</td>
+            <td>彈性</td>
+        </tr>
+
+        <tr>
+            <td>第三節</td>
+            <td widt>數學</td>
+            <td>健康</td>
+            <td>國語</td>
+            <td>鄉土</td>
+            <td rowspan="2">自然</td>
+        </tr>
+
+        <tr>
+            <td>第四節</td>
+            <td widt>英語</td>
+            <td>彈性</td>
+            <td>社會</td>
+            <td>英語</td>
+            <!-- <td>自然</td> -->
+        </tr>
+
+        <tr>
+            <td>午休</td>
+                <td colspan="5">
+                    </td>
+                    <!-- <td>二</td> -->
+                    <!-- <td>三</td> -->
+                    <!-- <td>四</td> -->
+                    <!-- <td>五</td> -->
+        </tr>
+
+        <tr>
+            <td>第五節</td>
+            <td>社會</td>
+            <td rowspan="2">美勞</td>
+            <td rowspan="3"></td>
+            <td rowspan="3">綜合</td>
+            <td>體育</td>
+        </tr>
+
+        <tr>
+            <td>第六節</td>
+            <td widt>體育</td>
+            <!-- <td>美勞</td> -->
+            <!-- <td></td> -->
+            <!-- <td>綜合</td> -->
+            <td>國語</td>
+        </tr>
+
+        <tr>
+            <td>第七節</td>
+            <td colspan="2">彈性</td>
+            <!-- <td>彈性</td> -->
+            <!-- <td>社會</td>
+            <td>英語</td> -->
+            <td>社會</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "window.zoomLevel": 1,
+    "editor.fontSize": 28,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "php.validate.executablePath": "C:/xampp/php/php.exe",
+    "files.autoSave": "afterDelay"
+} 

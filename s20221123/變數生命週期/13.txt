@@ -1,0 +1,9 @@
+var varX = 2; //此為全域宣告的varX
+function cal() {
+  console.log('ex varX', varX);//本因 全域有宣告過varX為2,應該輸出為2，但是因為在function區域內又有宣告一次但是程式還沒讀到function區域內的宣告所以此輸出為undefined
+  var varX = 5, varY = 1; //此為function區域內宣告的varX
+  console.log('varX+varY', varX + varY);
+}
+cal();
+console.log('varX', varX);
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #665544;
+            box-sizing: border-box;
+            /* overflow: hidden; */
+            margin: 0;
+            text-align: center;
+        }
+/* 
+        .header {
+            border: 1px solid black;
+
+        } */
+
+        body {
+            width: 960px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        .nav,
+        .feature,
+        .footer {
+            background-color: #efefef;
+            padding: 10px;
+            margin: 10px;
+        }
+        .nav{
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: center;            
+        }
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+
+        .nav>a{
+            margin-right: 25px;
+        }
+        .feature {
+            height: 600px;
+        }
+
+        .feature>h3 {
+            margin-bottom: 10px;
+        }
+/* 
+        .footer {
+            
+        } */
+ 
+
+
+        /* 使用 float */
+        .item {
+            background-color: #efefef;
+            width: 300px;
+            /* width: 30%; */
+            float: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+
+
+
+        /* 使用 flex  */
+        /* flex-basis: 只能用在同一行不換行的形況 */
+        .content2{
+            clear: both;
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            
+        }
+        .content2>.item-flex{
+            flex-basis: 300px;
+        }
+        .item-flex {
+            background-color: #efefef;
+            /* width: 300px; */
+            /* width: 30%; */
+            /* float: left; */
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Logo</h1>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="feature">
+            <!-- Feature -->
+            <h3>Title</h3>
+            <p>Feature</p>
+        </div>
+        <h3>item-flex</h3> 
+        <div class="item item1">
+            <p>Column 1</p>
+        </div>
+        <div class="item item2">
+            <p>Column 2</p>
+        </div>
+        <div class="item item3">
+            <p>Column 3</p>
+        </div>
+        <div class="item item1">
+            <p>Column 4</p>
+        </div>
+        <div class="item item2">
+            <p>Column 5</p>
+        </div>
+        <div class="item item3">
+            <p>Column 6</p>
+        </div>
+        <!-- <div class="item item1">
+            <p>Column 7</p>
+        </div>
+        <div class="item item2">
+            <p>Column 8</p>
+        </div>
+        <div class="item item3">
+            <p>Column 9</p> -->
+        </div>
+    </div>
+    <h3>item-flex</h3>  
+    <div class="content2">    
+  
+        <div class="item-flex item4">
+            <p>Column 1</p>
+        </div>
+        <div class="item-flex item5">
+            <p>Column 2</p>
+        </div>
+        <div class="item-flex item6">
+            <p>Column 3</p>
+        </div>
+        <!-- <div class="item-flex item4">
+            <p>Column 4</p>
+        </div>
+        <div class="item-flex item5">
+            <p>Column 5</p>
+        </div>
+        <div class="item-flex item6">
+            <p>Column 6</p> -->
+        </div>
+    </div>
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+</body>
+
+</html>

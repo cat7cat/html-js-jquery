@@ -1,0 +1,25 @@
+map()
+let array = [0, 1, 2, 3, 4]
+let chenged-array= array.map(value => value * 2)     // console.log(chenged-array); //[ 0, 2, 4, 6, 8 ]
+					             // 轉化 array 當中的所有 elements，全部乘以 2 並回傳結果陣列
+
+filter()
+
+回傳一個陣列，條件是return為true的物件，很適合用在搜尋功能，能找到符合條件的資料
+let name = ['Kevin','eva','Mackliu','lisa'];
+let result = name.filter(name => name.length>4);
+console.log(result);
+//Array['Kevin','Mackliu']
+
+
+reduce()
+
+let array = [ 0, 2, 4, 6, 8 ]
+array.reduce((acc, cur, index, array)
+
+
+//acc (accumulator) 累加器
+//cur (current value) 目前處理的值
+//index  現在的index 0,1,2,3,4
+//array ( array 自己本身)
+// 功能健全，map()、filter()都可以使用reduce做

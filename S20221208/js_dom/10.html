@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="myH1">appendChild</div>
+  <button onclick="appendFun()">增加</button>
+  <button onclick="removeFun()">刪除</button>
+  <button onclick="replaceFun()">修改取代</button>
+  <div id="myDiv">
+
+  </div>
+  <script>
+    // 先抓 div 的位置
+    const myDiv = document.getElementById('myDiv');
+
+
+    // 新建HTML
+    console.log(greenP);
+    function appendFun() {
+      const greenP = document.createElement('p');
+      // greenP.textContent 增加文字
+      greenP.textContent = "HELLO";
+
+      // greenP.style.color 添加css 
+      greenP.style.color = 'green';
+
+      // 在myDiv 裡面放入 greenP => <p style="color: green;">HELLO</p>
+      myDiv.appendChild(greenP);
+    }
+
+    //  刪除
+    function removeFun() {
+      // 移除myDiv裡面的最後一個(lastElementChild)節點
+      myDiv.removeChild(myDiv.lastElementChild);
+    }
+
+    // 修改
+    function replaceFun() {
+      // 修改myDiv裡面的最後一個(lastElementChild)節點
+      // 把Hello修改成 你好呀
+      myDiv.lastElementChild.textContent = '你好呀';
+    }
+
+  </script>
+</body>
+
+</html>

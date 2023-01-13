@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新北市政府徵才</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <div class=" mt-5 ">
+        <div class="d-flex text-center justify-content-center ">
+        <h3 class="text-center">新北市政府徵才</h3>
+        <button id="myBtn" style='float:right'">列印</button>
+        </div>
+        <hr>
+        <table class="table table-striped table-responsive  d-block d-md-table">
+            <thead>
+                <tr>
+                    <th class="table-primary" style="width:3%">序號</th>
+                    <th class="table-secondary w-25">職務名稱</th>
+                    <th class="table-success w-50">工作內容</th>
+                    <th class="table-info">發文地點</th>
+                    <th class="table-warning">發文日期</th>
+                </tr>
+            </thead>
+            <tbody id="myTbody">
+
+            </tbody>
+            </table>
+            </div></div>
+    </div>
+
+
+<div class="container mt-3">
+    <h2>Card Image Overlay</h2>
+    <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+    <div class="card img-fluid" style="width:500px">
+        <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+        <div class="card-img-overlay" id="myTbody">
+           
+        </div>
+    </div>
+</div>
+
+
+    <ul id="myUl">
+
+    </ul>
+
+    <p id="minP">
+
+    </p>
+    <br>
+    <p id="maxP">
+
+    </p>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 政府開放平台 太多人同時使用 把我們暫時封鎖
+        // https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=rdec-key-123-45678-011121314
+
+        // https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-C0ECFB19-DA53-46EF-BC76-146F83535780
+
+        $(function () {
+
+            const myUl = $('#myUl');
+            const myBtn = $('#myBtn');
+            const minP = $('#minP');
+            const maxP = $('#maxP');
+            const myTbody = $('#myTbody');
+
+            myBtn.click(function () {
+                window.print();
+            });
+
+
+            // ajax 範本
+            $.ajax({
+                url: "./104_export.json",
+                type: "get",
+                dataType: 'json',
+                success: function (data) {
+
+                    console.log('data', data);
+                   
+                    $.each(data, function (key, value) {
+                        // console.log(key);
+                        // console.log(value);
+
+                        // 練習一 縣市 + startTime
+
+                        let textContext = `
+                        
+
+                            <div>
+                                <div class="card-img-overlay">
+                                    <h4 class="card-title">${key + 1}</h4>
+                                    <p class="card-text">${value.title}</p>
+                                    <a href="#" class="btn btn-primary">詳細內容</a>
+                                </div>
+                            </div>
+                            
+
+                        `;
+                        myTbody.append(textContext);
+                    });
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                }
+            });
+            // ajax end
+        });
+
+
+    </script>
+</body>
+
+</html>

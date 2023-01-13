@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+
+</head>
+<h1>新北市各區人數統計表</h1>
+<table id="table">
+    <thead>
+      <tr>
+        <th>NO.</th>
+        <th>區</th>
+        <th>里數</th>
+        <th>鄰數</th>
+        <th>戶數</th>
+        <th>男</th>
+        <th>女</th>
+        <th>總人口數</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+</body>
+<script>
+     const tbody = $('tbody');
+    $.ajax({
+        type: "get",
+        url: "https://data.ntpc.gov.tw/api/datasets/292443d2-faef-452c-96cd-33053e7369b6/json?size=1000",
+        dataType: "json",
+        success: function (res) {
+            console.log(res);
+            let content='';
+            $.each(res, function (index, value) { 
+                content += 
+                `<tr>
+                    <td>${index+1}</td>
+                    <td>${value.district}</td>
+                    <td>${value.village}</td>
+                    <td>${value.neighborhood}</td>
+                    <td>${value.home}</td>
+                    <td>${value.male}</td>
+                    <td>${value.female}</td>
+                    <td>${value.male*1 + value.male*1}</td>
+                </tr>`
+            });
+            tbody.append(content);
+            $('#table').DataTable();
+
+        }
+    });
+</script>
+</html>

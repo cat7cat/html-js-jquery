@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 回家作業 HR表單 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR 表單</title>
+    <style>
+        body{
+            color:purple
+        }
+        h1{
+            color: cornflowerblue;
+        }
+        fieldset,legend { 
+            background-color: bisque;
+            border: 3px solid rgb(109, 201, 23);
+        }
+        #Top{
+            color: rgb(28, 81, 160);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>面試表單</h1>
+
+    <form action="Task.php"></form>
+    <fieldset >
+        <legend id="Top">Hr 面試表單</legend>
+        <p>
+            <label for="name">姓名</label>
+            <input type="text" name="name" id="name" placeholder="NAME" required>
+        </p>
+        <p>
+            <label for="adress">住址</label>
+            <input type="text" name="adress" id="adress" placeholder="adress" required>
+        </p>
+        <p>
+            <label for="radio">性別</label>
+            <input type="radio" name="radio" id="男性" >
+            <label for="男性">男性</label>
+            <input type="radio" name="radio" id="女性" >
+            <label for="女性">女性</label>
+        </p>
+        <p>
+            <label for="radio">年齡</label>
+            <input type="radio" name="userage" id="ageun20" value="">
+            <label for="ageun20">未滿20歲</label>
+            <input type="radio" name="userage" id="age20~30" value="">
+            <label for="age20~30">20~30歲</label>
+            <input type="radio" name="userage" id="age30~40" value="">
+            <label for="age30~40">30~40歲</label>
+            <input type="radio" name="userage" id="ageup40" value="">
+            <label for="ageup40">40歲以上</label>
+        </p>
+        <p>
+            <label for="date">生日</label>
+            <input type="date" name="date" id="date" value="">
+        </p>
+        <P>
+            <label for="money">期望薪資待遇</label>
+            <input type="number" name="money" id="money" value="">
+        </P>
+        <p>
+            <label for="checkbox">你能使用的程式語言(複選)</label>
+            <input type="checkbox" name="checkbox" id="html" value="">
+            <label for="html">html</label>
+            <input type="checkbox" name="checkbox" id="css" value="">
+            <label for="css">css</label>
+            <input type="checkbox" name="checkbox" id="js" value="">
+            <label for="js">js</label>
+            <input type="checkbox" name="checkbox" id="php" value="">
+            <label for="php">php</label>
+            <input type="checkbox" name="checkbox" id="sql" value="">
+            <label for="checkbox">sql</label>
+        </p>
+        <p>
+            <label for="worked">工作經歷</label>
+            <textarea name="worked" id="past" cols="30" rows="5"></textarea>
+        </p>
+        <p>
+            <label for="radio">上任工作持續時間</label>
+            <input type="radio" name="userage" id="wkyun1" value="">
+            <label for="wkyun1">未滿一年</label>
+            <input type="radio" name="userage" id="wkyup1" value="">
+            <label for="wkyup1">一年以上</label>
+            <input type="radio" name="userage" id="wkyup2" value="">
+            <label for="wkyup2">兩年以上</label>
+            <input type="radio" name="userage" id="wkyup3" value="">
+            <label for="wkyup3">三年以上</label>
+        </p>
+        <p>
+            <label for="area">主要居住地區</label>
+            <select name="area" id="area">
+                <option value="1">北</option>
+                <option value="2">中</option>
+                <option value="3">南</option>
+            </select>
+        </p>
+        <hr>
+        <p>
+            <input type="submit" value="送出">
+            <input type="reset" value="重新整理">
+        </p>
+    </fieldset>
+</body>
+
+</html>

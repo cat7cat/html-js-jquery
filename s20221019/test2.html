@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST-flex-basis and width</title>
+    <style>
+        .out {
+            border: 1px solid red;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            border: 1px solid yellow;
+            /* width: 1000px; */
+        }
+
+        .infos {
+            border: 1px solid green;
+            flex-basis: 350px;
+            width: 350px;
+        }
+
+        .dynamic {
+            border: 1px solid blue;
+            /* flex: 1 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="row">
+            <div class="infos">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+                ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit a
+            </div>
+            <div class="dynamic">
+                Lorem ipsum
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>switch case</h3>
+    <input type="text" id="myText">
+    <button type="button" id="myBtn" onclick="getInputText();">myBtn</button>
+    <p id="result"></p>
+
+    <!-- 練習二 -->
+    <!-- prompt 改成 input button -->
+    
+    <script>
+        function getInputText(){
+            let inputTextData = textInput.value ;
+            console.log('inputTextData',inputTextData);
+            // resultInput.textContent = inputTextData;
+            checkAccount(inputTextData);
+        }
+
+        function checkAccount(getName){
+            resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+            switch (getName) {
+            case 'amy':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello amy 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+            case 'bob':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello bob 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+            case 'cat':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello cat 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+
+            // default 其他
+            default:
+                // console.log('Hello 尚未註冊 請快註冊');
+                resultInput.textContent = 'Hello 尚未註冊 請快註冊';
+                break;
+        }
+        }
+        // input prompt 輸入使用者名稱 判斷 amy bob cat other .....
+        // output Hello XXX 您好 歡迎光臨
+        // other Hello 尚未註冊 請快註冊
+        const resultInput = document.getElementById('result');
+        const textInput = document.getElementById('myText');
+        const myBtn = document.getElementById('myBtn');
+        resultInput.textContent = "Hello XXX 您好 歡迎光臨";
+        // let getName = prompt('請輸入您的名稱');
+
+        let getName = 'amy123';
+        let resultText = "";
+        
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        // { } => 建立物件
+        // // 可在 Console 直接呼叫        
+        let obj = {
+            'name': 'PHP',
+            'age': 180,
+            'one': function () {
+                // 先呼叫 this 看看這時候叫到的是誰
+                console.log(this); // 這時的父層為 obj
+                console.log(this.name); // => 叫的到 PHP
+            },
+            // 箭頭函式沒有自己的 this ，所以object裡面的 function 要打傳統函式，不然找 this 的時候會往父層抓
+            'two': () => {
+                console.log(this); // 這時的父層為 window
+                console.log(this.age); // 這時候叫到的是 187
+
+                // 如果真的很想叫 obj 裡的 age 就把 this 拿掉換成物件名稱
+                // // 不然就寫 function 的傳統函式
+                console.log(obj.age); // 這時候叫到的是 180
+            }
+        }
+
+        // 用箭頭函式時，父層的 age 要用 var 才抓的到
+        // // *因為* const 跟 let 只會在 script 生存，不會跑到 window 下 *( const 及 let 的死區之一 )
+        var age = 187;
+        // let age = 189; // => 吃不到
+        // const age = 188; // => 也吃不到
+
+        // console.log(obj);
+        // console.log(obj.name);
+        // console.log(obj.age);
+        console.log(obj.one());
+        console.log(obj.two());
+
+
+
+        let score = {
+            'name': 'JS',
+            'english': 66,
+            'math': 98,
+            'chinses': 71,
+            'sum': function () {
+                return this.english + this.math + this.chinses;
+            },
+            'avg': function () {
+                return Math.ceil(score.sum() / 3);
+            }
+        }
+        console.log(`總成績為${score.sum()}分`);
+        console.log(`平均成績為${score.avg()}分`);
+
+    </script>
+</body>
+
+</html>

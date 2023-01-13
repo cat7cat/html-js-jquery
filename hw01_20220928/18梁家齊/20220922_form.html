@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>form</h3>
+    <!-- name 送到後端 -->
+    <!-- id 當前頁面 方便使用者操作 -->
+    <!-- fieldset 產生框框將內容群組 -->
+    <fieldset>
+        <legend>my form</legend>
+        <form action="">
+            <p>
+                <label for="">姓名:</label><br>
+                <input type="text" id="" name="" autocomplete="on"><br>
+            </p>
+            <p>
+                <label for="">期望薪水:</label><br>
+                <input type="number" id="" name=""step="1000"><br><br>
+            </p>
+            <!-- <p>
+                <label for="">密碼:</label><br>
+                <input type="password" id="" name=""><br><br>
+            </p> -->
+
+            <p>
+                <!-- radio 單一選擇 -->
+                <label for="radio">最擅長的語言</label><br>
+
+                <input type="radio" name="radio" id="html">
+                <label for="html">html</label>
+                <input type="radio" name="radio" id="css">
+                <label for="css">css</label>
+                <input type="radio" name="radio" id="js">
+                <label for="js">js</label>
+                <input type="radio" name="radio" id="php">
+                <label for="php">php</label>
+                <input type="radio" name="radio" id="sql">
+                <label for="sql">sql</label>
+            </p>
+            <p>
+                <!-- checkbox 複選  -->
+                <label for="checkbox">hobby</label><br>
+
+                <input type="checkbox" name="checkbox[]" id="ride" value="ride">
+                <label for="ride">ride</label>
+                <input type="checkbox" name="checkbox[]" id="drive" value="drive">
+                <label for="drive">drive</label>
+                <input type="checkbox" name="checkbox[]" id="dive" value="dive">
+                <label for="dive">dive</label>
+                <input type="checkbox" name="checkbox[]" id="drink" value="drink">
+                <label for="drink">drink</label>
+                <input type="checkbox" name="checkbox[]" id="drift" value="drift">
+                <label for="drift">drift</label>
+            </p>
+            <p>
+                <label for="">居住地區</label><br>
+                <select name="live" id="">
+                    <option value="" selected>請選擇
+                    <option value="1">北
+                    <option value="2">中
+                    <option value="3">南
+                </select>
+            </p>
+            <input type="submit" value="Submit"><br>
+            
+        </form>
+    </fieldset>
+</body>
+
+</html>

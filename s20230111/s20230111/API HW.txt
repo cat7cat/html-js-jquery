@@ -1,0 +1,6 @@
+https://opendata.hccg.gov.tw/API/v3/Rest/OpenData/004E0547C834932D?take=10&skip=0
+
+
+
+Access to XMLHttpRequest at 'https://opendata.hccg.gov.tw/API/v3/Rest/OpenData/004E0547C834932D?take=10&skip=0' from origin 'http://127.0.0.1:5501' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+opendata.hccg.gov.tw/API/v3/Rest/OpenData/004E0547C834932D?take=10&skip=0:1          Failed to load resource: net::ERR_FAILED

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">新增子元素</button>
+    <button id="delBtn">刪除子元素</button>
+    <div id="container"></div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const delBtn = document.getElementById('delBtn');
+        const container = document.getElementById('container');
+
+        //監聽新增安紐並加上新增子節點<p>function
+        btn.addEventListener('click',function (e) {
+            let p = document.createElement('p');
+            p.textContent='新增完成';
+            container.appendChild(p);
+        })
+        //監聽刪除按鈕並加上刪除子節點function
+        delBtn.addEventListener('click',function (e) {
+            delChild(container);
+        });
+
+        //刪除最後一個子節點
+        function delChild(el){
+            el.lastChild.remove();
+        }
+    </script>
+</body>
+</html>

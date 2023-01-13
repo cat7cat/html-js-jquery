@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map()/reduce()/filter()</title>
+</head>
+
+<body>
+    <script>
+        let employee = [3, 4, 5, 6, 7];
+
+        // 發兩個月
+        let total = employee.reduce((a, b) => { return (a + b) }) * 2;
+        console.log("發兩個月總共 $", total);
+
+        // 每個人都發兩個月，領五萬的發四個月
+        console.log("每個人都發兩個月，領五萬的發四個月，總共 $", employee.reduce((a, b) => { if (b == 5) { return a + b * 4 } else { return a + (b * 2) } return a }, 0));
+
+        /* reduce( ) */
+        // arr.reduce(callback[accumulator => a, currentValue => b, currentIndex => b 的key, array], initialValue => 初始值)
+        // 沒設初始值的時候 [0] 為初始值
+        // 有設初始值時，則從 [0] 開始加
+        // // a 跟 b 一定要填!!!!!!!!!!!!!!!!!!!!!
+        let hey = [1, 3, 5, 7, 9];
+        let aa = hey.reduce(function (a, b) {
+            a + b;
+            return a + b;
+        }, 10)
+        console.log(aa);
+
+        // 計算相同元素數量，並以物件屬性(key值)表示
+        let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+        let countedNames = names.reduce(function (allNames, name) {
+            if (name in allNames) {
+                allNames[name]++;
+            } else {
+                allNames[name] = 1;
+            }
+            return allNames;
+        }, {});
+        console.log(countedNames);
+
+
+        /* filter( ) */
+        // arr.filter(callback[value => a + 條件] ) 
+        // => 抓出的答案會放進產出新陣列
+        const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        console.log(words.filter(a => a.length > 6));
+
+        const numbers = [1, 500, 325, 18, 510];
+        console.log(numbers.filter(a => a > 100));
+
+        /* map( ) */
+        // arr.map(callback[value => a + 對陣列內每個 a 要做的改變] )
+        // => 抓出的答案會放進產出新陣列
+        console.log(numbers.map(a => a * 2));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+https://weather.tsukumijima.net/primary_area.xml
+
+https://weather.tsukumijima.net/api/forecast

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// JavaScript  /  php
+// -- 變數 variable 
+//     -- 字串 string 
+//     -- 數值 number 
+//     -- 布林值 boolem 
+// -- 陣列 array
+// -- 迴圈 loop
+// -- 函式 function
+// -- 物件導向 oop
+// -- 判斷式
+// -- Html { input , p , button }
+
+        // 變數的type
+        let x = "text"; //string
+        let y = 123; //nubmer
+        let z = false //boolean
+
+        // 查看變數型態
+        console.log('x typeof() => ',typeof(x));
+        console.log('y typeof() => ',typeof(y));
+        console.log('z typeof() => ',typeof(z));
+
+        // console.log => JS 按F12 可以查看console的資料
+
+        // 宣告變數
+        // let / const / var
+        // let
+        // 區域變數
+
+        let localNum = 11;
+        console.log('init localNum: ',localNum);
+        localNum = 5678 ;
+        console.log('localNum: ',localNum);
+
+        //const 常數
+        const constNum = 3.14 ;
+        console.log('init localNum: ',localNum);
+        
+        console.log('localNum: ',localNum);
+        
+        //variable let
+        var varX=2 ;  // 宣告varX=2 假設是別人寫的
+        var varY=5 ;
+        function cal(){   // function 是自己宣告的 
+            console.log('varX:', varX); // 這行因為在宣告上面有衝突所以就顯示 undefined
+            var varX = 5 ;  
+            console.log('varX:', varX); // 假設重複宣告的情況下 varX的數值為後來宣告的5 
+            varY=1 ; // varY=1 沒有宣告的話  會直接取代 varY 的數值
+            var varY=3 ;  // varY=1 沒有宣告的話  會直接取代 varY 的數值
+            console.log('varY', varY);
+            console.log('varX+varY:', varX+varY);
+        }
+        cal();//function cal END
+
+        console.log('varX', varX);
+        console.log('varY', varY);  
+        // 再次呼叫 varX 和 varY 的數值為 上面的數值 非function 裡面的數值
+
+
+
+
+    </script>
+</body>
+</html>

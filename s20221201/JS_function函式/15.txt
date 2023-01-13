@@ -1,0 +1,25 @@
+    // 一般
+    // 宣告
+    // function 需先定義，定義好並不會自動執行，需要呼叫才能執行
+        function myFun() {
+            document.write('myFun ok');
+            console.log('myFun ok');
+        }
+     myFun(); //呼叫 function
+
+     //有變數
+     //可將參數傳入function裡，成為function裡的變數，
+     //參數只會存活function裡，參數之間需用，隔開
+        function helloFun(nameInput, age) {
+            let str = `Hello ${nameInput} ${age}`;
+            console.log('str', str);
+        }
+
+
+     // 有回傳值
+     // 當需要function處理後的結果，需要回傳 =>return 執行的內容 ;
+        function sum(num1, num2) {
+            return num1+num2;
+        }
+     // sun(3,6) //呼叫 function 
+     // console.log(sun(3,6)); //9

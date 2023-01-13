@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            font-size: 16px;
+            border:2px solid #333; 
+        }
+
+         input[type=submit] {
+            background-color: #5CADAD;
+            border-radius: 4px;
+            color: #555;
+        } 
+
+        .st {
+            color: #555;
+        }
+
+        .ss {
+            color: blue;
+        }
+
+        main {
+            width:60%;
+            margin: auto 10%;
+            background: linear-gradient(blue, white);
+            background: linear-gradient(to bottom, bule, white);
+            background: linear-gradient(180deg, bule, white);
+            background: linear-gradient(to top, yellow, bule);
+            background: linear-gradient(to bottom, bule 0%, white 100%);
+            ;
+            color:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h3 class="ss st">form</h3>
+        <form action="xxx.php">
+            <fieldset>
+                <legend>My Form</legend>
+                <p>
+                    <label for="">真實姓名 :</label>
+                    <input type="text" name="name" id="">
+                </p>
+                <p>
+                    <label for="">希望薪資 :
+                        <input type="number" name="money" id="">
+                    </label>
+                    <style>
+                        .sop {
+                            display: grid;
+                            grid-template-rows: repeat(40px, 5);
+                        }
+                    </style>
+                <p class="sop">最喜歡的部分 :
+                    <label>HTML
+                        <input type="radio" name="user" id="html" value="age1">
+                    </label>
+                    <label>CSS
+                        <input type="radio" name="user" id="css" value="age2">
+                    </label>
+                    <label>JAVASCRIPT
+                        <input type="radio" name="user" id="javjscript" value="age3">
+                    </label>
+                    <label>PHP
+                        <input type="radio" name="user" id="PHP" value="age4">
+                    </label>
+                    <label>SQL
+                        <input type="radio" name="user" id="SQL" value="age5">
+                    </label>
+                </p>
+                <p class="sop">興趣 :
+                    <label>
+                        <input type="checkbox" name="love[]" id="" value="1"> 吉他
+                    </label>
+                    <label>
+                        <input type="checkbox" name="love[]" id="" value="2"> 游泳
+                    </label>
+                    <label>
+                        <input type="checkbox" name="love[]" id="" value="3"> 爬山
+                    </label>
+                    <label>
+                        <input type="checkbox" name="love[]" id="" value="4"> 看電影
+                    </label>
+                    <label>
+                        <input type="checkbox" name="love[]" id="" value="5"> 聽音樂
+                    </label>
+                </p>
+                <p>
+                    <label>希望工作地點 :
+                        <select multiple="2">
+                            <option value="1">北</option>
+                            <option value="2">中</option>
+                            <option value="3">南</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>未來規劃 :
+                        <textarea name="" id="" cols="42" rows="10"></textarea>
+                    </label>
+                </p>
+                <p>Email :
+                    <input type="email" name="" id="" size="30">
+                </p>
+                <p>地址 :
+                    <input type="text" name="" id="" size="40">
+                </p>填寫日期 :
+                <input type="date" name="" id="">
+                </p>
+                <p>
+                    <input type="image" src="img/images.jpg" alt="歡迎">
+                </p>
+                </p>
+                <input type="reset" value="清除">
+                <input type="submit" value="送出">
+                </p>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

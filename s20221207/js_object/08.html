@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myClass {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // studentObj
+        // property
+        // 'name' : 'amy'
+        // 'age' : 18
+        // 'chinese' : 70,
+        // 'english' : 80,
+        // 'math' : 90,
+
+        // method
+        // sumFun
+        // avgFun
+        let studentObj = {   // 宣告studentObj 
+            'name': 'amy',
+            'age': 18,
+            'chinese': 70,
+            'english': 80,
+            'math': 90,
+            'sumFun': function (){   //function 加總
+                let sum = this.chinese + this.english + this.math;  //三科分數加總 
+                console.log('sum =>' ,sum);
+                return sum;
+            },
+            'avgFun':function(){
+                let result = this.sumFun();  // 把加總的值 給result 字串
+                let avg = result / 3;       //  把result / 3 給AVG 字串
+                console.log('${result} / 3 =>',avg);  
+            }
+
+        }
+        console.log('studentObj',studentObj);           //把studentObj值帶進系統
+        console.log('studentObj.name',studentObj.name); //把studentObj.name值帶進系統
+        console.log('studentObj.age',studentObj.age);   //把studentObj.age值帶進系統
+        console.log('studentObj.chinse',studentObj.chinese); //把studentObj.chinese值帶進系統
+        console.log('studentObj.math',studentObj.math); //把studentObj.math值帶進系統
+        console.log('studentObj.english',studentObj.english); //把studentObj.english值帶進系統
+        studentObj.sumFun();
+        studentObj.avgFun();
+
+
+
+
+    </script>
+</body>
+
+</html>

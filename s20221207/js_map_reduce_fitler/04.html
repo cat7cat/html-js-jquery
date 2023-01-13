@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///發年終
+        ///employee=[3,4,5,6,7];
+        //ex1發兩個月要多少
+        ///ex2每個人發兩萬, 但領5萬有4個 總共多少
+
+let employee=[3,4,5,6,7];
+let employeebonus=employee.map((value,key)=>{//map 將陣列的值 依順序分別帶入執行指定的條件  再按順序將結果輸出新的陣列
+    if (value==5){
+        return value *4;
+    }else{
+
+        return value*2;
+    }
+
+});
+console.log(employeebonus);
+let i=0;
+let sum =employeebonus.reduce((total,value)=>{//reduce 將陣列中的值 由左至右傳入函式 將陣列轉換成value
+    i++;
+    console.log('total',total);
+    console.log('value',value);
+    return total+value;
+});
+console.log('sum',sum);
+
+let employeeArrFilter = employee.filter((value) => {//fliter 將陣列中的值 經指定函式運算後 將結果重新排列成新的陣列
+            return value < 5;
+        })
+        
+        console.log('employee', employee);
+        console.log('employeeArrFilter', employeeArrFilter);
+
+
+    </script>
+</body>
+</html>

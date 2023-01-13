@@ -1,0 +1,24 @@
+<script>
+    // 一般function 無參數時記得後方仍要加()
+    function myFun() {
+        document.write('myFun ok');
+        console.log('myFun ok');
+    }
+
+
+        
+    // 有變數function(變數只在function內作用)
+        function helloFun(nameInput, age) {
+            let str = `Hello ${nameInput} ${age}`;
+            console.log('str', str);
+        }
+        
+        
+        // 有回傳值function(可在function外呼叫回傳值)
+        function sum(num1, num2) {
+            return num1+num2;
+        }
+        // 使用方式如下
+        let test = sum(5,8)
+        document.write(test)
+</script>

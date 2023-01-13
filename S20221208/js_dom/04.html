@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#"></a>
+    <p>
+
+        <button type="button" onclick="appendfun();">myBtn appendChild dom</button>
+    </p>
+    <p>
+        <button type="button" onclick="removefun();">myBtn remove dom</button>
+
+    </p>
+    <div id="mydiv">
+        <!-- green p tag 丟進來 -->
+    </div>
+    <script>
+        const mydiv = document.getElementById('mydiv');
+        // const greenp =document.createElement('p');  //const放在這裡只能生成一次節點
+
+        // greenp.textContent='hello :))';
+        // greenp.style.color='green';
+        // console.log('greenp',greenp);
+        let text = 1
+        function appendfun() {//
+            const greenp = document.createElement('p');//建立一個p tag 綁定變數叫greenp
+            //const放在這裡可以隨button一直生成節點
+            greenp.textContent = 'hello :))' + text;
+            text++;
+            greenp.style.color = 'green';
+            console.log('greenp', greenp);
+
+
+            mydiv.appendChild(greenp);//在id=mydiv的裡面新增一個節點為greenp
+            //   appendChild=>新增一個節點
+        }
+
+        function removefun() {
+            // 找到我要刪除的節點
+            const myP = document.querySelectorAll('#mydiv>p');//querySelectorAll重複選取多個元素
+
+            console.log(myP);
+            myP[0].remove();//刪除myP[0]裡的起始節點
+
+            // 找到刪除的節點
+            // 刪除他的子結點 myDiv.firstElementChild
+            // mydiv.removeChild(mydiv.firstElementChild); //刪除id=mydiv的裡面最先的節點
+            // mydiv.removeChild(mydiv.lastElementChild);//刪除id=mydiv的裡面最後的節點
+            //removeChild刪除一個節點
+        }
+
+
+    </script>
+</body>
+
+</html>

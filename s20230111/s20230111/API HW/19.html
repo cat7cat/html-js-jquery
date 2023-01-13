@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take me Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .ll {
+            /* padding-top: 20px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-100 p-2">
+        <h1 class="text-center w-100 h-25">動物認領養</h1>
+        <p class="text-center">更新時間 : 2023-01-11</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center table-danger" scope="col"></th>
+                    <th class="text-center table-danger" scope="col">流水編號</th>
+                    <!-- <th scope="col">animal_kind</th> -->
+                    <th class="text-center table-danger" scope="col">品種</th>
+                    <th class="text-center table-danger" scope="col">所在地</th>
+                    <th class="text-center table-danger" scope="col">連絡電話</th>
+                    <th class="text-center table-danger" scope="col">照片</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6">
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $.ajax({
+            url: "https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL",
+            type: "get",
+            dataType: 'json',
+            success: function (res) {
+                // console.log(res);
+                let animal = "";
+                $.each(res, function (key, value) {
+                    let Id = res[key].animal_id;
+                    let Kind = res[key].animal_kind;
+                    let Variety = res[key].animal_Variety;
+                    let place = res[key].animal_place;
+                    let tel = res[key].shelter_tel;
+                    let image = res[key].album_file;
+                    // console.log(Id, Kind, Variety, place, tel, image);
+                    animal += `<tr class="list"> 
+                                      <th class="text-center ll">${key + 1}</th> 
+                                      <td class="text-center ll">${Id}</td>
+                                      <td class="text-center ll">${Variety}</td> 
+                                      <td class="text-center ll">${place}</td> 
+                                      <td class="text-center ll">${tel}</td> 
+                                      <td class="text-center"><img src="${image}" alt="" width="200px;"></td> 
+                                  </tr>`
+                })
+                $("tbody").html(animal);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(jerrorThrown);
+            }
+        })
+    </script>
+</body>
+
+</html>

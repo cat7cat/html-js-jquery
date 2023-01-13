@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button type="button" id="myBtn">myBtn</button>
+    <button type="button" id="myBtn2">myBtn2</button>
+    <button type="button" id="myBtn3">myBtn3</button>
+    <script>
+        // 方法一
+        function myFun() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+        // myBtn.addEventListener(helloClick(), myFun);
+        myBtn.addEventListener("click", myFun);
+
+        function helloClick(){
+            return "click";
+        }
+
+        //方法二
+        myBtn2.addEventListener("click", myFun);
+        
+        //方法三 箭頭函示        
+        myBtn3.addEventListener("click", () => {
+            document.getElementById("demo").innerHTML = "Hello World 333";
+        });
+
+        // 方法四
+        let funVal = function funValFunction(){
+            console.log('funValFunction');
+        };
+        console.log('funVal',funVal);
+        funVal();
+
+         // 方法五
+         let funVal2 = () => {
+            console.log('funValFunction 222');
+        };
+        console.log('funVal2',funVal2);
+        funVal2();
+
+
+        // 1.myFun 代表整個function
+        // 2.myFun() 呼叫function
+
+        
+    </script>
+</body>
+
+</html>

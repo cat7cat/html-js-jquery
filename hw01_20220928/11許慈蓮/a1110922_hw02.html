@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR</title>
+<style>
+    label{
+         color: blueviolet;
+    }
+    h1{
+        color: darkgoldenrod;
+    }
+    legend{
+        background-color: cyan;
+        font-size: xx-large;
+        font-weight: 800;
+    }
+    fieldset{
+        background-color: antiquewhite;
+    }
+    input{
+        font-size: x-large;
+        font-weight: 800;
+    }   
+</style>
+</head>
+
+
+<body>
+    <h1>人員面試單</h1>
+    <form action="xxx.php">
+        <fieldset>
+            <legend>面試者</legend>
+
+
+            <p>
+                <label for="name">姓名：</label>
+                <input type="text" name="name" id="name" value="">
+            </p>
+            <label for="">姓別：</label>
+            <input type="radio" name="radio" id="">
+            <label for="">男</label>
+
+            <input type="radio" name="radio" id="">
+            <label for="">女</label>
+            <p>
+                <label for="age">年齡：</label>
+                <input type="number" name="age" id="age" value="">
+            </p>
+
+
+            <label for="date">生日：</label>
+            <input type="date" name="date" id="date" value="">
+            <p>
+                <label for="name">應徵職位：：</label>
+                <input type="radio" name="radio" id="">
+                <label for="">前端工程師</label>
+                <input type="radio" name="radio" id="">
+                <label for="">後端工程師</label>
+            </p>
+
+
+
+            <p>
+                <label for="money">希望待遇：</label>
+                <input type="number" name="money" id="money" value="">
+            </p>
+
+
+
+
+            <p>
+
+                <label for="">會的程式語言:</label>
+                <input type="checkbox" name="love[]" id="">
+                <label for="">cs</label>
+                <input type="checkbox" name="love[]" id="">
+                <label for="">php</label>
+                <input type="checkbox" name="love[]" id="">
+                <label for="">js</label>
+                <input type="checkbox" name="love[]" id="">
+                <label for="">sql</label>
+                <input type="checkbox" name="love[]" id="">
+                <label for="">html</label>
+
+            </p>
+
+            <label for="">加分項目：</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">程式相關證照</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">語言相關證照</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">作品集</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">年資</label>
+            <input type="checkbox" name="love[]" id="">
+            <label for="">其他</label>
+
+
+            <p>
+                <label for="area">可接受之工作地點：</label>
+                <select name="area" id="area">
+                    <option value="1">北</option>
+                    <option value="2">中</option>
+                    <option value="3">南</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="dream">我的簡介</label>
+                <textarea name="" id="dream" cols="50" rows="10">
+
+            </textarea>
+            </p>
+
+
+            <p>
+                <input type="submit" value="送出">
+                <input type="reset" value="重整">
+            </p>
+            <img src="./1.jpg" alt="">
+        </fieldset>
+        
+
+
+    </form>
+</body>
+
+</html>

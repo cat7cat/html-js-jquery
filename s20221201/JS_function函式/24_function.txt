@@ -1,0 +1,19 @@
+        // 宣告
+        // 一般function宣告 無參數時記得加() 呼叫後顯示結果
+        function myFun() {
+            document.write('myFun ok');
+            console.log('myFun ok');
+        }
+
+        // 有變數
+        // 有變數的function 輸入變數後可做運算或更改文字 再呼叫
+        function helloFun(nameInput, age) {
+            let str = `Hello ${nameInput} ${age}`;
+            console.log('str', str);
+        }
+
+        // 有回傳值
+        // 有回傳值的function 呼叫的值為return的回傳值 
+        function sum(num1, num2) {
+            return num1+num2;
+        }

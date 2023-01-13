@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee=[3,4,5,6,7]
+        let employee_money=employee.map((value,index)=>{
+            //創造一個新的陣列給employee_money，內容物為function執行後的結果
+            if (value==5) {
+                return value*4
+            }else{
+                return value*2
+            }
+        });
+        console.log(employee_money);
+        let sum=employee_money.reduce((total,value)=>{
+            //創造一個新的陣列給employee_money，內容物為function加總後的結果
+            console.log('value',value);
+            //目前跑到哪一個陣列中的東西的值
+            console.log('total',total);
+            //total讀取function一開始拿到數值
+            return total+value
+            //回傳直給function
+
+        })
+        console.log(sum);
+
+        let employee_less =employee.filter((value)=>{
+            //filter進行篩選
+            return value<5
+            // 將篩選條件的結果回傳
+        })
+        console.log('employee_less',employee_less)
+    </script>
+</body>
+</html>

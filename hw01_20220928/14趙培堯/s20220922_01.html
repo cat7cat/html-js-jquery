@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 加註樣式條件 */
+        td {
+            width: 300px;
+            font-size: 35px;
+            text-align: center;
+            color: blue;
+            background-color: aqua;
+        }
+
+        /* 當滑鼠經過時變色 */
+        td:hover {
+            background-color: black;
+            color: aliceblue;
+        }
+
+        .lastClass {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table桌子的意思，裡面可以建立表格。 -->
+    <table border="1">
+        <h1 style="text-align:center">Table放置表格的桌面</h1>
+        <tr>
+            <th>左</th>
+            <th>中</th>
+            <th>右</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <!-- <td>4</td> -->
+            <!-- <td style="color:red ;">5</td> -->
+            <td colspan="2">6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <table border="1">
+        <h1 style="text-align:center">Table放置表格的桌面</h1>
+        <tr>
+            <th>左</th>
+            <th>中</th>
+            <th>右</th>
+        </tr>
+        <tr>
+            <td colspan="3">1</td>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td>4</td>
+            <td style="color:red ;">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td colspan="2">7</td>
+            <!-- <td>8</td> -->
+            <td>9</td>
+        </tr>
+    </table>
+    <table border="1">
+        <h1 style="text-align:center">Table放置表格的桌面</h1>
+        <tr>
+            <th>左</th>
+            <th>中</th>
+            <th>右</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td>4</td>
+            <td style="color:red ;">5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td rowspan="3" class="lastClass">9</td>
+        </tr>
+    </table>
+    <table border="1">
+        <h1 style="text-align:center">Table放置表格的桌面</h1>
+        <tr>
+            <th>左</th>
+            <th>中</th>
+            <th>右</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td style="color:red ;">5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>節數</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+        </tr>
+        <tr>
+            <td>早自習<br>0750-0830</td>
+            <td colspan="5"></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td>放假</td> -->
+        </tr>
+        <tr>
+            <td>第一節<br>0840-0920</td>
+            <td rowspan="2">國語<br>劉展華</td>
+            <td colspan="3">數學<br>劉展華</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td>國語<br>劉展華</td>
+        </tr>
+        <tr>
+            <td>第二節<br>0930-1010</td>
+            <!-- <td></td> -->
+            <td>自然<br>黃新民</td>
+            <td>音樂<br>萬巧如</td>
+            <td>國語<br>劉展華</td>
+            <td>彈性<br>劉展華</td>
+        </tr>
+        <tr>
+            <td>第三節<br>1030-1110</td>
+            <td>數學<br>劉展華</td>
+            <td>健康<br>潘文欽</td>
+            <td>國語<br>劉展華</td>
+            <td>鄉土<br>魏士欽</td>
+            <td rowspan="2">自然<br>黃新民</td>
+        </tr>
+        <tr>
+            <td>第四節<br>1120-1200</td>
+            <td>英文<br>黃定宜</td>
+            <td>彈性<br>劉展華</td>
+            <td>社會<br>劉展華</td>
+            <td>英語<br>黃定宜</td>
+            <!-- <td>放假</td> -->
+        </tr>
+        <tr>
+            <td>午休時間<br>1200-1320</td>
+            <td colspan="5"></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td>放假</td> -->
+        </tr>
+        <tr>
+            <td>第五節<br>1320-1410</td>
+            <td>社會<br>劉展華</td>
+            <td rowspan="2">美勞<br>許文傑</td>
+            <td rowspan="3"></td>
+            <td rowspan="3">綜合<br>劉展華</td>
+            <td>體育<br>潘文欽</td>
+        </tr>
+        <tr>
+            <td>第六節<br>1410-1500</td>
+            <td>體育<br>潘文欽</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td>國語<br>劉展華</td>
+        </tr>
+        <tr>
+            <td>第七節<br>1520-1600</td>
+            <td colspan="2">國語<br>劉展華</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td>社會<br>劉展華</td>
+        </tr>
+    </table>
+</body>
+
+</html>

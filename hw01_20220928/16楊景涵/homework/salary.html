@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salary</title>
+    <script>
+        function adder() {
+        let num1 = parseInt(document.getElementById("salary").elements["num1"].value);
+        let num2 = parseInt(document.getElementById("salary").elements["num2"].value);
+        let num3 = parseInt(document.getElementById("salary").elements["num3"].value);
+        let total = num1 + num2 - num3;
+        document.getElementById("p1").innerHTML = total;
+      }
+    </script>
+</head>
+<body>
+      <form id="salary">
+        <fieldset>
+            <legend>薪資計算</legend>
+        薪資: <input type="text" name="num1"><br /><br /> 
+        獎金: <input type="text" name="num2"><br /><br />
+        勞健保: <input type="text" name="num3"><br /><br />
+        <button onclick="adder()">submit</button>
+        </fieldset>
+      </form>
+      <p id="p1">計算結果(實領薪資)</p>
+</body>
+</html>

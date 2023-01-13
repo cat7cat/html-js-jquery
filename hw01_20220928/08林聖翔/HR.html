@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-林聖翔 填寫表單作業</title>
+    <link rel="stylesheet" href="from.css">
+</head>
+
+<body>
+
+    <form action="/member_register.php">
+        <!-- w3school fieldset -->
+        <H1>面試人員資料填寫</H1>
+        <fieldset>
+            <legend>面試人員資料填寫：</legend>
+
+            <label for="name">姓名：</label>
+            <input type="text" name="interview_name" id="interview_name" placeholder="請輸入您的姓名">
+            </P>
+            <P>
+                <label for="interview_phone">頭照：</label>
+                <input type="file" accept="image/jpeg,image/png,image/gif" name="" id="">
+            </P>
+            <P>
+                <label for="interview_work">上一份工作：</label>
+                <input type="text" name="interview_work" id="interview_work" placeholder="請輸入您前公司資訊">
+            </P>
+            <P>
+                <label for="interview_phone">電話：</label>
+                <input type="text" name="interview_phone" id="interview_phone" placeholder="請輸入您的電話">
+            </P>
+            <P>
+                <label for="interview_money">收入：</label>
+                <input type="number" name="interview_money" id="interview_money" placeholder="請輸入您的收入">
+            </P>
+            <P>
+                <label for="interview_birthday">生日：</label>
+                <input type="date" name="interview_birthday" id="interview_birthday">
+            </P>
+            <P>
+                <label for="interview_mail">信箱：</label>
+                <input type="text" name="interview_mail" id="interview_mail" placeholder="請輸入您的信箱">
+            </P>
+            <P>
+                <label for="interview_getZone">居住地：</label>
+
+                <select type="text" name="interview_getZone" id="interview_getZone">
+                    <option value="KL">基隆市</option>
+                    <option value="TP">台北市</option>
+                    <option value="TPC">新北市</option>
+                    <option value="TYC">桃園市</option>
+                    <option value="HC">新竹市</option>
+                    <option value="HCC">新竹縣</option>
+                    <option value="MLC">苗栗縣</option>
+                    <option value="TC">台中市</option>
+                    <option value="CHC">彰化縣</option>
+                    <option value="NTCT">南投縣</option>
+                    <option value="YLC">雲林縣</option>
+                    <option value="CY">嘉義市</option>
+                    <option value="CYC">嘉義縣</option>
+                    <option value="TN">台南市</option>
+                    <option value="KH">高雄市</option>
+                    <option value="PTC">屏東縣</option>
+                    <option value="TTCT">台東縣</option>
+                    <option value="HLC">花蓮縣</option>
+                    <option value="LC">宜蘭縣</option>
+                    <option value="PHC">澎湖縣</option>
+                    <option value="KMC">金門縣</option>
+                    <option value="MZC">連江縣</option>
+                </select>
+            </P>
+            <P>
+                <label for="interview_interest">興趣：</label>
+                <input type="checkbox" name="
+interview_interest" id="interview_interest">看電影
+                <input type="checkbox" name="
+interview_interest" id="interview_interest">旅遊
+                <input type="checkbox" name="
+interview_interest" id="interview_interest">玩遊戲
+                <input type="checkbox" name="
+interview_interest" id="interview_interest">購物
+            </P>
+            <p>
+                <input type="submit" value="送出資料">
+                <input type="reset" value="清除">
+            </p>
+
+
+        </fieldset>
+    </form>
+
+
+
+
+
+</body>
+
+</html>

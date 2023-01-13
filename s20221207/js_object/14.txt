@@ -1,0 +1,30 @@
+let studentOBJ={
+            // 跑计
+            "name":"amy",
+            "age":18,
+            "chinese":70,
+            "english":80,
+            "math":90,
+            // 皚ずfuntctionΑ┮Τ计羆肚
+            "sumFun":function(){
+                let sum =studentOBJ.chinese+studentOBJ.english+studentOBJ.math;
+                console.log('sum=>',sum);
+                return sum; 
+            },
+            // 盢肚计キА埃
+            "avgFun":function(sum){
+                let avg =sum/3;
+                console.log("avg",avg);
+                return avg;
+            }
+        }
+        // 皚ず甧
+        console.log(studentOBJ);
+        console.log(studentOBJ.name);
+        console.log(studentOBJ.age);
+        console.log(studentOBJ.chinese);
+        console.log(studentOBJ.english);
+        console.log(studentOBJ.math);
+        // ㊣ㄧ计㊣酬ㄧ计羆だキА
+        console.log(studentOBJ.avgFun(studentOBJ.sumFun()));
+        console.log(typeof(studentOBJ.sumFun()))

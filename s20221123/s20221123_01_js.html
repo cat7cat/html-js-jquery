@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>switch case</h3>
+    <p id="result">12345</p>
+    
+    <script>
+        // input prompt 輸入使用者名稱 判斷 amy bob cat other .....
+        // output Hello XXX 您好 歡迎光臨
+        // other Hello 尚未註冊 請快註冊
+        const resultInput = document.getElementById('result');
+        const resultInput1 = document.getElementById('result');
+        const resultInput2 = document.getElementById('result').textContent;
+        console.log('resultInput1',resultInput1);
+        console.log('resultInput2',resultInput2);
+
+        resultInput.textContent = "Hello XXX 您好 歡迎光臨";
+        let getName = prompt('請輸入您的名稱');
+
+        // let name = 'amy123';
+        let resultText = "";
+        resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+        switch (getName) {
+            case 'amy':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello amy 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+            case 'bob':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello bob 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+            case 'cat':
+                // resultText = `Hello ${getName} 您好 歡迎光臨 ....`;
+                // console.log('Hello cat 您好 歡迎光臨 ....');
+                resultInput.textContent = resultText;
+                break;
+
+            // default 其他
+            default:
+                // console.log('Hello 尚未註冊 請快註冊');
+                resultInput.textContent = 'Hello 尚未註冊 請快註冊';
+                break;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    /* 最後顯示最下面的blue */
+    /* 所以外部套件時 外套css放上方 */
+    /* 我們自己寫css放下面 */
+    /* 餐盤的故事 */
+    h3{
+      color:red
+    }
+    h3{
+      color:blue
+    }
+  </style>
+</head>
+<body>
+  <h3>HR System</h3>
+  <!-- forn tab -->
+  <!-- input:text tab -->
+  <!-- input:number tab -->
+  <!-- label tab -->
+  <form action="xxx.php">
+    <!-- w3schools fieldset -->
+    <fieldset>
+      <legend>新進人員資料</legend>
+    <!-- input text 文字方塊 -->
+    <!-- name => 送到後端 -->
+    <!-- id 當前頁面 方便我們操控 -->
+    <!-- name money -->
+    <!-- name name -->
+    <p>
+      <label for="name-id">姓名:</label>
+      
+      <input type="text" name="name" id="name-id">
+      
+    </p>
+    <!-- input number 數字方塊 -->
+    <p>
+      <label for="money">薪水:</label>
+      <input type="number" name="money" id="money">
+    </p> 
+    <p>
+      <label for="pwd">密碼:</label>
+      <input type="password" name="password" id="pwd">
+    </p>
+    <p>
+      <label for="date">日期:</label>
+      <input type="date" name="date" id="date">
+    </p>
+    <p>
+      <!-- radio 單一選擇 / label 放後面 -->
+      <label for="">最愛的程式語言:</label>
+      <input type="radio" name="radio" id="html">
+      <label for="">html:</label>
+      <input type="radio" name="radio" id="css">
+      <label for="">css</label>
+      <input type="radio" name="radio" id="js">
+      <label for="">js</label>
+      <input type="radio" name="radio" id="php">
+      <label for="">php</label>
+      <input type="radio" name="radio" id="sql">
+      <label for="">sql</label>
+    </p>
+    <!-- 練習 -->
+    <!-- checkbox -->
+    <!-- 我的興趣 可以多選 5個選擇 -->
+    <p>
+      <label for="">最愛的程式語言(可多選):</label>
+      <input type="checkbox" name="checkbox" id="html">
+      <label for="">html:</label>
+      <input type="checkbox" name="checkbox" id="css">
+      <label for="">css</label>
+      <input type="checkbox" name="checkbox" id="js">
+      <label for="">js</label>
+      <input type="checkbox" name="checkbox" id="php">
+      <label for="">php</label>
+      <input type="checkbox" name="checkbox" id="sql">
+      <label for="">sql</label>
+    </p>
+    <p>
+
+       <!-- <input type="submit" value=""> -->
+       <label for="area">未來工作地點</label>
+       <select name="area" id="area">
+        <option value="1">北</option>
+        <option value="2">中</option>
+        <option value="3">南</option>
+       </select>
+    </p>
+    <p>
+      <label for="dream">我的夢想</label>
+      <textarea name="" id="dream" cols="30" rows="10">
+      </textarea>
+    </p>
+    <input type="submit" value="送出">
+    <input type="reset" value="重整">
+
+
+    </fieldset>
+  </form>
+</body>
+</html>

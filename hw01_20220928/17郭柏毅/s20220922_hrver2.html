@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR用表單</title>
+    <style>
+        tr{
+            background-color: bisque;
+        }
+        table{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>基本資料</caption>
+        <tr>
+            <td><label for="name">姓名</label></td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td><label for="birthday">生日</label></td>
+            <td><input type="date" name="birthday" id="birthday"></td>
+        </tr>
+        <tr>
+            <td><label for="email">email</label></td>
+            <td><input type="email" name="useremail" id="useremail"></td>
+        </tr>
+        <tr>
+            <td><label for="dep">應徵部門</label></td>
+            <td><input type="text" name="dep" id="dep"></td>
+        </tr>
+        <tr>
+            <td><label for="salary">期望待遇</label></td>
+            <td><input type="text" name="salary" id="salary"></td>
+        </tr>
+        <tr>
+            <td><label for="">使用語言</label></td>
+            <td><label for="">PHP</label>
+                <input type="checkbox" name="language" id="">
+                <label for="">java</label>
+                <input type="checkbox" name="languate" id="">
+                <label for="">python</label>
+                <input type="checkbox" name="" id="">
+                <label for="">javascript</label>
+                <input type="checkbox" name="" id="">
+                <label for="">C++</label>
+                <input type="checkbox" name="" id="">
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="area">希望工作地點</label></td>
+            <td><select name="location" id="">
+                    <option value="" selected>請選擇</option>
+                    <option value="1">台北</option>
+                    <option value="2">台中</option>
+                    <option value="3">台南</option>
+                    <option value="4">皆可</option>
+                </select></td>
+        </tr>
+    </table>
+    
+    <table>
+        <caption>專業內容</caption>
+        <tr>
+            <td><label for="">參與專案</label></td>
+            <td><textarea name="" id="" cols="46" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="">補充事項</label></td>
+            <td><textarea name="" id="" cols="30" rows="2"></textarea></td>
+        </tr>
+    </table>
+    <input type="submit" value="提出">
+    <input type="reset" value="重填">
+</body>
+
+</html>
